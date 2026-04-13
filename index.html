@@ -507,43 +507,246 @@ tailwind.config = {
   </div>
 </section>
 
-<!-- WORK / GALLERY -->
-<section id="work" class="py-28 md:py-36 relative">
-  <div class="max-w-[1400px] mx-auto px-6 md:px-10">
-    <div class="flex flex-col md:flex-row md:items-end md:justify-between gap-6 mb-14">
+<!-- WORK / GALLERY (circular 3D, drag/swipe-driven) -->
+<section id="work" class="relative py-24 md:py-28">
+  <div class="max-w-[1400px] mx-auto px-6 md:px-10 mb-10 md:mb-14">
+    <div class="flex flex-col md:flex-row md:items-end md:justify-between gap-4">
       <div>
-        <div class="eyebrow mb-4">Recent Work</div>
-        <h2 class="display text-5xl md:text-6xl lg:text-[84px]">Proof is in the<br/><span class="text-brand">yard.</span></h2>
+        <div class="eyebrow mb-3">Recent Work</div>
+        <h2 class="display text-4xl md:text-5xl lg:text-[72px]">Proof is in the<br/><span class="text-brand">yard.</span></h2>
       </div>
-      <p class="text-white/60 max-w-[38ch]">A few recent jobs across the area — from weekly mows to full landscape installs.</p>
-    </div>
-
-    <!-- asymmetric masonry-ish grid -->
-    <div class="grid grid-cols-12 gap-4 md:gap-5">
-      <figure class="col-span-12 md:col-span-8 relative rounded-2xl overflow-hidden edge photo-treat aspect-[16/10]">
-        <img src="assets/photos/IMG_0277.jpg" alt="Fresh mulch bed and cut lawn" class="w-full h-full object-cover" />
-      </figure>
-      <figure class="col-span-6 md:col-span-4 relative rounded-2xl overflow-hidden edge photo-treat aspect-[4/5]">
-        <img src="assets/photos/IMG_8681.jpg" alt="Stone walkway with landscaping" class="w-full h-full object-cover" />
-      </figure>
-      <figure class="col-span-6 md:col-span-4 relative rounded-2xl overflow-hidden edge photo-treat aspect-square">
-        <img src="assets/photos/IMG_0211.jpg" alt="Trailer and truck on site" class="w-full h-full object-cover" />
-      </figure>
-      <figure class="col-span-6 md:col-span-4 relative rounded-2xl overflow-hidden edge photo-treat aspect-square">
-        <img src="assets/photos/IMG_0273.jpg" alt="Property upkeep" class="w-full h-full object-cover" />
-      </figure>
-      <figure class="col-span-12 md:col-span-4 relative rounded-2xl overflow-hidden edge photo-treat aspect-square">
-        <img src="assets/photos/IMG_0063.jpg" alt="BR Lawn Care truck and trailer with equipment on-site" class="w-full h-full object-cover" />
-      </figure>
-      <figure class="col-span-6 md:col-span-5 relative rounded-2xl overflow-hidden edge photo-treat aspect-[4/5]">
-        <img src="assets/photos/IMG_0259.jpg" alt="Landscape work in progress" class="w-full h-full object-cover" />
-      </figure>
-      <figure class="col-span-6 md:col-span-7 relative rounded-2xl overflow-hidden edge photo-treat aspect-[4/5] md:aspect-[16/10]">
-        <img src="assets/photos/IMG_8629.jpg" alt="Residential landscaping" class="w-full h-full object-cover" />
-      </figure>
+      <p class="text-white/60 max-w-[38ch] md:text-right">Drag or swipe sideways to spin the gallery — real jobs across Eastern NC, from weekly mows to full landscape installs.</p>
     </div>
   </div>
+
+  <!-- 3D stage: isolated height, never hijacks page scroll -->
+  <div class="relative w-full" style="height: 600px;">
+    <div class="absolute inset-0 pointer-events-none brand-glow"></div>
+    <div id="cg-stage" class="absolute inset-0 flex items-center justify-center overflow-hidden" style="perspective: 2800px; touch-action: pan-y; cursor: grab;">
+      <div id="cg-ring" class="relative" style="width: 1px; height: 1px; transform-style: preserve-3d; will-change: transform;"></div>
+    </div>
+  </div>
+
+  <!-- drag hint (below the stage, clearly separated) -->
+  <div class="mt-12 md:mt-16 text-white/40 text-xs tracking-[0.25em] uppercase flex items-center justify-center gap-3 pointer-events-none">
+    <span class="w-10 h-px bg-white/20"></span>
+    Drag / swipe to spin
+    <span class="w-10 h-px bg-white/20"></span>
+  </div>
 </section>
+
+<style>
+  #cg-stage .cg-card{
+    position:absolute; width:270px; height:370px;
+    left:50%; top:50%; margin-left:-135px; margin-top:-185px;
+    border-radius:18px; overflow:hidden;
+    background:rgba(18,22,31,0.55);
+    border:1px solid rgba(255,255,255,0.08);
+    box-shadow:
+      0 40px 80px -30px rgba(5,10,20,0.8),
+      0 22px 80px -24px rgba(42,165,255,0.35),
+      inset 0 1px 0 rgba(255,255,255,0.06);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    transition:opacity .3s linear;
+  }
+  #cg-stage .cg-card img{
+    position:absolute; inset:0; width:100%; height:100%;
+    object-fit:cover;
+    filter:contrast(1.04) saturate(0.95);
+  }
+  #cg-stage .cg-card::after{
+    content:""; position:absolute; inset:0; pointer-events:none;
+    background:
+      linear-gradient(180deg, rgba(11,14,20,0) 45%, rgba(11,14,20,0.85) 100%),
+      linear-gradient(215deg, rgba(42,165,255,0.18), transparent 55%);
+    mix-blend-mode:multiply;
+  }
+  #cg-stage .cg-cap{
+    position:absolute; left:0; right:0; bottom:0; padding:18px 20px;
+    color:#fff; z-index:2;
+    background:linear-gradient(180deg, rgba(11,14,20,0) 0%, rgba(11,14,20,0.85) 100%);
+  }
+  #cg-stage .cg-cap .t{font-family:'Cabinet Grotesk','Satoshi',sans-serif;font-weight:800;font-size:18px;letter-spacing:-0.01em}
+  #cg-stage .cg-cap .s{font-size:11px;letter-spacing:0.18em;text-transform:uppercase;color:#7BC3FF;margin-top:4px}
+  #cg-stage.grabbing{ cursor: grabbing !important; }
+
+  @media (max-width: 767px){
+    #cg-stage .cg-card{ width:190px; height:260px; margin-left:-95px; margin-top:-130px; border-radius:14px; }
+    #cg-stage .cg-cap{ padding:14px 16px; }
+    #cg-stage .cg-cap .t{ font-size:15px; }
+  }
+</style>
+
+<script>
+(function(){
+  const items = [
+    { src:'assets/photos/IMG_0277.jpg', title:'Fresh Mulch & Cut', tag:'Lawn Care' },
+    { src:'assets/photos/IMG_8681.jpg', title:'Stone Walkway Install', tag:'Landscape' },
+    { src:'assets/photos/IMG_0211.jpg', title:'On the Job', tag:'Crew' },
+    { src:'assets/photos/IMG_0273.jpg', title:'Property Upkeep', tag:'Maintenance' },
+    { src:'assets/photos/IMG_0063.jpg', title:'Rig & Equipment', tag:'Field Ready' },
+    { src:'assets/photos/IMG_0259.jpg', title:'Landscape In Progress', tag:'Install' },
+    { src:'assets/photos/IMG_8629.jpg', title:'Residential Cleanup', tag:'Residential' },
+    { src:'assets/photos/IMG_0301.jpg', title:'Branded Trailer', tag:'On Site' },
+    { src:'assets/photos/IMG_8683.jpg', title:'Finished Yard', tag:'Completed' },
+    { src:'assets/photos/IMG_0246.jpg', title:'Detail Work', tag:'Precision' },
+    { src:'assets/photos/IMG_0150.jpg', title:'Tree & Stump Work', tag:'Removal' },
+    { src:'assets/photos/IMG_0249.jpg', title:'Curb Appeal', tag:'Landscape' },
+  ];
+
+  const ring = document.getElementById('cg-ring');
+  const stage = document.getElementById('cg-stage');
+  if(!ring || !stage) return;
+
+  const isMobile = window.matchMedia('(max-width: 767px)').matches;
+  const radius = isMobile ? 440 : 720;
+  const anglePer = 360 / items.length;
+
+  const cards = items.map((it, i) => {
+    const card = document.createElement('div');
+    card.className = 'cg-card';
+    card.style.transform = `rotateY(${i * anglePer}deg) translateZ(${radius}px)`;
+    card.innerHTML = `
+      <img src="${it.src}" alt="${it.title}" draggable="false" loading="lazy" />
+      <div class="cg-cap">
+        <div class="s">${it.tag}</div>
+        <div class="t">${it.title}</div>
+      </div>
+    `;
+    ring.appendChild(card);
+    return card;
+  });
+
+  let rotation = 0;
+  let velocity = 0;
+  let dragging = false;
+  let lastX = 0;
+  let lastMoveTs = 0;
+  let idleSince = performance.now();
+
+  const AUTO_SPEED = 0.08;
+  const DRAG_TO_DEG = 0.35;
+  const WHEEL_TO_DEG = 0.25;
+  const FRICTION = 0.94;
+  const IDLE_MS = 1400;
+
+  function markActive(){ idleSince = performance.now() + 999999; }
+  function releaseActive(){ idleSince = performance.now(); }
+
+  stage.addEventListener('pointerdown', (e) => {
+    if(e.pointerType === 'touch') return;
+    dragging = true;
+    lastX = e.clientX;
+    lastMoveTs = performance.now();
+    velocity = 0;
+    stage.classList.add('grabbing');
+    stage.setPointerCapture(e.pointerId);
+    markActive();
+  });
+  stage.addEventListener('pointermove', (e) => {
+    if(!dragging || e.pointerType === 'touch') return;
+    const dx = e.clientX - lastX;
+    lastX = e.clientX;
+    const now = performance.now();
+    const dt = Math.max(1, now - lastMoveTs);
+    lastMoveTs = now;
+    const deg = dx * DRAG_TO_DEG;
+    rotation += deg;
+    velocity = deg * (16 / dt);
+  });
+  function endDrag(e){
+    if(!dragging) return;
+    dragging = false;
+    stage.classList.remove('grabbing');
+    try { stage.releasePointerCapture(e.pointerId); } catch(_){}
+    releaseActive();
+  }
+  stage.addEventListener('pointerup', endDrag);
+  stage.addEventListener('pointercancel', endDrag);
+  stage.addEventListener('pointerleave', endDrag);
+
+  let touchLastX = 0, touchLastTs = 0, touchActive = false, touchStartY = 0, decided = false, horizontal = false;
+  stage.addEventListener('touchstart', (e) => {
+    if(e.touches.length !== 1) return;
+    touchActive = true; decided = false; horizontal = false;
+    touchLastX = e.touches[0].clientX;
+    touchStartY = e.touches[0].clientY;
+    touchLastTs = performance.now();
+    velocity = 0;
+    markActive();
+  }, { passive: true });
+  stage.addEventListener('touchmove', (e) => {
+    if(!touchActive) return;
+    const x = e.touches[0].clientX;
+    const y = e.touches[0].clientY;
+    if(!decided){
+      const dx = Math.abs(x - touchLastX);
+      const dy = Math.abs(y - touchStartY);
+      if(dx > 6 || dy > 6){
+        decided = true;
+        horizontal = dx > dy;
+      } else return;
+    }
+    if(!horizontal) return;
+    if(e.cancelable) e.preventDefault();
+    const dxMove = x - touchLastX;
+    touchLastX = x;
+    const now = performance.now();
+    const dt = Math.max(1, now - touchLastTs);
+    touchLastTs = now;
+    const deg = dxMove * DRAG_TO_DEG;
+    rotation += deg;
+    velocity = deg * (16 / dt);
+  }, { passive: false });
+  function endTouch(){
+    if(!touchActive) return;
+    touchActive = false;
+    releaseActive();
+  }
+  stage.addEventListener('touchend', endTouch);
+  stage.addEventListener('touchcancel', endTouch);
+
+  stage.addEventListener('wheel', (e) => {
+    const absX = Math.abs(e.deltaX);
+    const absY = Math.abs(e.deltaY);
+    if(absX > absY && absX > 1){
+      e.preventDefault();
+      const deg = e.deltaX * WHEEL_TO_DEG;
+      rotation += deg;
+      velocity = deg;
+      markActive();
+      setTimeout(releaseActive, 60);
+    }
+  }, { passive: false });
+
+  function tick(){
+    const now = performance.now();
+    const idle = !dragging && !touchActive && (now - idleSince) > IDLE_MS;
+
+    if(Math.abs(velocity) > 0.02){
+      rotation += velocity;
+      velocity *= FRICTION;
+    } else if(idle){
+      rotation += AUTO_SPEED;
+    }
+
+    ring.style.transform = `rotateY(${rotation}deg)`;
+
+    const mod = ((rotation % 360) + 360) % 360;
+    for(let i = 0; i < cards.length; i++){
+      const itemAngle = i * anglePer;
+      const rel = (itemAngle + mod) % 360;
+      const norm = Math.abs(rel > 180 ? 360 - rel : rel);
+      const op = Math.max(0.25, 1 - (norm / 180));
+      cards[i].style.opacity = op.toFixed(3);
+    }
+
+    requestAnimationFrame(tick);
+  }
+  requestAnimationFrame(tick);
+})();
+</script>
 
 <!-- FAQ (SEO + AI answer box) -->
 <section id="faq" class="py-24 md:py-32 border-t border-white/5 bg-[#0A0D14]">
