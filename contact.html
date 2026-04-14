@@ -10,7 +10,7 @@
 <meta name="description" content="Request a free lawn care, tree removal, land clearing, or landscape estimate from BR Lawn Care. Locally owned, fully insured, 24-hour reply across Eastern North Carolina. Call 252.503.0984." />
 <meta name="keywords" content="free lawn care estimate, eastern NC landscape quote, tree removal quote, land clearing estimate, BR Lawn Care contact" />
 <meta name="robots" content="index, follow, max-image-preview:large" />
-<link rel="canonical" href="https://brlawncare.com/contact.html" />
+<link rel="canonical" href="https://brlawncare.com/site/contact.html" />
 
 <meta name="geo.region" content="US-NC" />
 <meta name="geo.placename" content="Eastern North Carolina" />
@@ -19,16 +19,16 @@
 <meta property="og:site_name" content="BR Lawn Care" />
 <meta property="og:title" content="Free Estimate | BR Lawn Care — Eastern NC" />
 <meta property="og:description" content="Request a free estimate for lawn care, tree removal, land clearing, or landscape installs. 24-hour reply. Locally owned. Fully insured." />
-<meta property="og:url" content="https://brlawncare.com/contact.html" />
-<meta property="og:image" content="https://brlawncare.com/assets/photos/IMG_0301.jpg" />
+<meta property="og:url" content="https://brlawncare.com/site/contact.html" />
+<meta property="og:image" content="https://brlawncare.com/site/assets/photos/IMG_0301.jpg" />
 
 <meta name="twitter:card" content="summary_large_image" />
 <meta name="twitter:title" content="Get a Free Estimate — BR Lawn Care" />
 <meta name="twitter:description" content="Tell us about your property. We'll send a straight answer within 24 hours." />
-<meta name="twitter:image" content="https://brlawncare.com/assets/photos/IMG_0301.jpg" />
+<meta name="twitter:image" content="https://brlawncare.com/site/assets/photos/IMG_0301.jpg" />
 
-<link rel="icon" href="/logo.JPG" type="image/jpeg" />
-<link rel="apple-touch-icon" href="/logo.JPG" />
+<link rel="icon" href="../logo.JPG" type="image/jpeg" />
+<link rel="apple-touch-icon" href="../logo.JPG" />
 <link rel="alternate" type="text/plain" title="llms.txt" href="/llms.txt" />
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -41,7 +41,7 @@
   "@context": "https://schema.org",
   "@type": "ContactPage",
   "name": "Contact BR Lawn Care",
-  "url": "https://brlawncare.com/contact.html",
+  "url": "https://brlawncare.com/site/contact.html",
   "description": "Request a free lawn care, tree removal, land clearing, or landscape estimate from BR Lawn Care in Eastern North Carolina.",
   "mainEntity": {
     "@type": "LandscapingBusiness",
@@ -113,6 +113,20 @@ tailwind.config = {
     padding:14px 16px;color:#F3F5F8;font-size:15px;font-family:inherit;
     transition:border-color .2s,box-shadow .2s,background-color .2s
   }
+  .field > select{
+    color-scheme:dark;
+    appearance:none;-webkit-appearance:none;-moz-appearance:none;
+    background-image:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='14' height='14' viewBox='0 0 24 24' fill='none' stroke='%237BC3FF' stroke-width='2.5' stroke-linecap='round' stroke-linejoin='round'><polyline points='6 9 12 15 18 9'/></svg>");
+    background-repeat:no-repeat;
+    background-position:right 16px center;
+    padding-right:44px;
+  }
+  .field > select option{
+    background-color:#12161F;
+    color:#F3F5F8;
+    padding:10px;
+  }
+  .field > select option:disabled{color:rgba(255,255,255,0.4)}
   .field > input::placeholder,.field > textarea::placeholder{color:rgba(255,255,255,0.35)}
   .field > input:focus,.field > select:focus,.field > textarea:focus{
     outline:none;border-color:#2AA5FF;background:rgba(42,165,255,0.05);
@@ -151,7 +165,7 @@ tailwind.config = {
 <header class="fixed top-0 inset-x-0 z-50 navblur">
   <div class="max-w-[1400px] mx-auto px-5 md:px-10 h-16 flex items-center justify-between">
     <a href="index.html" class="flex items-center gap-3 group" aria-label="BR Lawn Care home">
-      <img src="/logo.JPG" alt="BR Lawn Care logo" class="h-9 w-9 rounded-full object-cover ring-1 ring-white/10" />
+      <img src="../logo.JPG" alt="BR Lawn Care logo" class="h-9 w-9 rounded-full object-cover ring-1 ring-white/10" />
       <div class="leading-none">
         <div class="font-display text-[17px] tracking-[-0.035em]">BR Lawn Care</div>
         <div class="text-[10px] tracking-[0.22em] uppercase text-muted mt-1">Eastern NC</div>
@@ -287,14 +301,14 @@ tailwind.config = {
           </div>
           <div class="field">
             <label for="address">Property Address or Area</label>
-            <input id="address" name="address" type="text" placeholder="Street, town, or zip" autocomplete="street-address" />
+            <input id="address" name="address" type="text" required placeholder="Street, town, or zip" autocomplete="street-address" />
           </div>
         </div>
 
         <!-- services pill selector -->
         <div class="mt-7">
-          <div class="text-xs font-semibold tracking-[0.12em] uppercase text-white/60 mb-4">What do you need?</div>
-          <div class="pill flex flex-wrap gap-2">
+          <div class="text-xs font-semibold tracking-[0.12em] uppercase text-white/60 mb-4">What do you need? <span class="text-brand normal-case tracking-normal">(select at least one)</span></div>
+          <div id="services-group" class="pill flex flex-wrap gap-2">
             <input type="checkbox" id="s1" name="services[]" value="Lawn Care" />
             <label for="s1">Lawn Care</label>
             <input type="checkbox" id="s2" name="services[]" value="Tree / Stump Removal" />
@@ -345,7 +359,7 @@ tailwind.config = {
   <div class="max-w-[1400px] mx-auto px-6 md:px-10 grid grid-cols-12 gap-10">
     <div class="col-span-12 md:col-span-5">
       <div class="flex items-center gap-3">
-        <img src="/logo.JPG" alt="BR Lawn Care" class="h-10 w-10 rounded-full object-cover ring-1 ring-white/10" />
+        <img src="../logo.JPG" alt="BR Lawn Care" class="h-10 w-10 rounded-full object-cover ring-1 ring-white/10" />
         <div class="font-display text-xl tracking-[-0.035em]">BR Lawn Care</div>
       </div>
       <p class="mt-5 text-white/55 max-w-[42ch] text-sm leading-relaxed">
@@ -383,6 +397,16 @@ tailwind.config = {
   // Formspree AJAX submit + inline success state
   const form = document.getElementById('estimate-form');
   form.addEventListener('submit', async (e) => {
+    // require at least one service checkbox
+    const services = form.querySelectorAll('input[name="services[]"]');
+    const anyChecked = Array.from(services).some(i => i.checked);
+    if (!anyChecked) {
+      e.preventDefault();
+      services[0].setCustomValidity('Please select at least one service.');
+      services[0].reportValidity();
+      services.forEach(i => i.addEventListener('change', () => services[0].setCustomValidity(''), { once: true }));
+      return;
+    }
     if (form.action.includes('REPLACE_WITH_YOUR_FORMSPREE_ID')) return; // let it fail visibly in dev
     e.preventDefault();
     const data = new FormData(form);
