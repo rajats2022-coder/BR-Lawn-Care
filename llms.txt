@@ -28,8 +28,8 @@ BR Lawn Care serves residential and commercial clients throughout Eastern North 
 
 ## Key Pages
 
-- [Home](https://brlawncare.com/): Overview of services, pricing, recent work, and FAQs.
-- [Contact / Free Estimate](https://brlawncare.com/contact.html): Request a free estimate, call the business directly, or send property photos.
+- [Home](https://brlawncare.com/site/index.html): Overview of services, pricing, recent work, and FAQs.
+- [Contact / Free Estimate](https://brlawncare.com/site/contact.html): Request a free estimate, call the business directly, or send property photos.
 
 ## Frequently Asked Questions
 
@@ -54,6 +54,6 @@ Property address or general area, the services you think you need (or "not sure"
 ## Contact
 
 - **Phone:** 252.503.0984
-- **Estimate Request Form:** https://brlawncare.com/contact.html
+- **Estimate Request Form:** https://brlawncare.com/site/contact.html
 - **Service Region:** Eastern North Carolina
 - **Hours:** Monday – Saturday, 7am – 7pm

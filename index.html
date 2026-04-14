@@ -24,18 +24,18 @@
 <meta property="og:title" content="BR Lawn Care | Lawn, Tree &amp; Landscape Services in Eastern NC" />
 <meta property="og:description" content="Mowing, tree removal, land clearing, and full landscape installs across Eastern NC. Fully insured. Free estimates. Starting at $55." />
 <meta property="og:url" content="https://brlawncare.com/" />
-<meta property="og:image" content="https://brlawncare.com/assets/photos/IMG_0301.jpg" />
+<meta property="og:image" content="https://brlawncare.com/site/assets/photos/IMG_0301.jpg" />
 <meta property="og:locale" content="en_US" />
 
 <!-- Twitter -->
 <meta name="twitter:card" content="summary_large_image" />
 <meta name="twitter:title" content="BR Lawn Care — Eastern NC Lawn, Tree &amp; Landscape" />
 <meta name="twitter:description" content="Clean cuts. Cleared land. Done right. Fully insured. Free estimates. Lawn care from $55." />
-<meta name="twitter:image" content="https://brlawncare.com/assets/photos/IMG_0301.jpg" />
+<meta name="twitter:image" content="https://brlawncare.com/site/assets/photos/IMG_0301.jpg" />
 
 <!-- Favicon -->
-<link rel="icon" href="/logo.JPG" type="image/jpeg" />
-<link rel="apple-touch-icon" href="/logo.JPG" />
+<link rel="icon" href="../logo.JPG" type="image/jpeg" />
+<link rel="apple-touch-icon" href="../logo.JPG" />
 
 <!-- AI crawler hints (llms.txt standard) -->
 <link rel="alternate" type="text/plain" title="llms.txt" href="/llms.txt" />
@@ -55,7 +55,7 @@
   "url": "https://brlawncare.com/",
   "telephone": "+1-252-503-0984",
   "priceRange": "$$",
-  "image": "https://brlawncare.com/assets/photos/IMG_0301.jpg",
+  "image": "https://brlawncare.com/site/assets/photos/IMG_0301.jpg",
   "logo": "https://brlawncare.com/logo.JPG",
   "address": {
     "@type": "PostalAddress",
@@ -253,7 +253,7 @@ tailwind.config = {
 <header class="fixed top-0 inset-x-0 z-50 navblur">
   <div class="max-w-[1400px] mx-auto px-5 md:px-10 h-16 flex items-center justify-between">
     <a href="index.html" class="flex items-center gap-3 group" aria-label="BR Lawn Care home">
-      <img src="/logo.JPG" alt="BR Lawn Care logo" class="h-9 w-9 rounded-full object-cover ring-1 ring-white/10" />
+      <img src="../logo.JPG" alt="BR Lawn Care logo" class="h-9 w-9 rounded-full object-cover ring-1 ring-white/10" />
       <div class="leading-none">
         <div class="font-display text-[17px] tracking-crunch">BR Lawn Care</div>
         <div class="text-[10px] tracking-[0.22em] uppercase text-muted mt-1">Eastern NC</div>
@@ -422,6 +422,91 @@ tailwind.config = {
   </div>
 </section>
 
+<!-- BEFORE / AFTER -->
+<section id="transformations" class="py-24 md:py-28 relative border-t border-white/5">
+  <div class="max-w-[1400px] mx-auto px-6 md:px-10">
+    <div class="flex flex-col md:flex-row md:items-end md:justify-between gap-6 mb-12">
+      <div>
+        <div class="eyebrow mb-4">Before &amp; After</div>
+        <h2 class="display text-4xl md:text-5xl lg:text-[60px] text-white leading-[0.95]">Drag to see<br/><span class="text-brand">the difference.</span></h2>
+      </div>
+      <p class="text-white/60 max-w-[38ch] text-[16px] leading-relaxed">Real yards, real crews, real results. Slide each card to reveal what a day with BR looks like.</p>
+    </div>
+
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+      <!-- card template repeated 3× -->
+      <div class="ba-card relative aspect-[4/5] rounded-2xl overflow-hidden edge shadow-tile select-none cursor-ew-resize" data-before="assets/before-after/Before_pic_1.jpg" data-after="assets/before-after/After_pic_1.jpg">
+        <img class="ba-after block h-full w-full object-cover" src="assets/before-after/After_pic_1.jpg" alt="After — BR Lawn Care transformation" draggable="false" />
+        <div class="ba-before-wrap absolute inset-0 overflow-hidden" style="clip-path: inset(0 50% 0 0);">
+          <img class="ba-before block h-full w-full object-cover" src="assets/before-after/Before_pic_1.jpg" alt="Before — overgrown yard" draggable="false" />
+        </div>
+        <div class="absolute top-3 left-3 text-[10px] tracking-[0.18em] uppercase font-semibold text-white/95 bg-black/60 px-2.5 py-1 rounded-full backdrop-blur">Before</div>
+        <div class="absolute top-3 right-3 text-[10px] tracking-[0.18em] uppercase font-semibold text-white bg-brand/90 px-2.5 py-1 rounded-full">After</div>
+        <div class="ba-handle absolute top-0 bottom-0 w-[2px] bg-white/90 pointer-events-none" style="left: calc(50% - 1px);">
+          <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 h-10 w-10 rounded-full bg-white shadow-[0_6px_20px_rgba(0,0,0,0.35)] flex items-center justify-center">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" class="text-ink"><polyline points="15 18 9 12 15 6"></polyline><polyline points="9 18 15 12 9 6" transform="translate(6 0)"></polyline></svg>
+          </div>
+        </div>
+      </div>
+
+      <div class="ba-card relative aspect-[4/5] rounded-2xl overflow-hidden edge shadow-tile select-none cursor-ew-resize" data-before="assets/before-after/Before_pic_2.jpg" data-after="assets/before-after/After_pic_2.jpg">
+        <img class="ba-after block h-full w-full object-cover" src="assets/before-after/After_pic_2.jpg" alt="After — BR Lawn Care transformation" draggable="false" />
+        <div class="ba-before-wrap absolute inset-0 overflow-hidden" style="clip-path: inset(0 50% 0 0);">
+          <img class="ba-before block h-full w-full object-cover" src="assets/before-after/Before_pic_2.jpg" alt="Before — overgrown yard" draggable="false" />
+        </div>
+        <div class="absolute top-3 left-3 text-[10px] tracking-[0.18em] uppercase font-semibold text-white/95 bg-black/60 px-2.5 py-1 rounded-full backdrop-blur">Before</div>
+        <div class="absolute top-3 right-3 text-[10px] tracking-[0.18em] uppercase font-semibold text-white bg-brand/90 px-2.5 py-1 rounded-full">After</div>
+        <div class="ba-handle absolute top-0 bottom-0 w-[2px] bg-white/90 pointer-events-none" style="left: calc(50% - 1px);">
+          <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 h-10 w-10 rounded-full bg-white shadow-[0_6px_20px_rgba(0,0,0,0.35)] flex items-center justify-center">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" class="text-ink"><polyline points="15 18 9 12 15 6"></polyline><polyline points="9 18 15 12 9 6" transform="translate(6 0)"></polyline></svg>
+          </div>
+        </div>
+      </div>
+
+      <div class="ba-card relative aspect-[4/5] rounded-2xl overflow-hidden edge shadow-tile select-none cursor-ew-resize" data-before="assets/before-after/Before_pic_3.jpg" data-after="assets/before-after/After_pic_3.jpg">
+        <img class="ba-after block h-full w-full object-cover" src="assets/before-after/After_pic_3.jpg" alt="After — BR Lawn Care transformation" draggable="false" />
+        <div class="ba-before-wrap absolute inset-0 overflow-hidden" style="clip-path: inset(0 50% 0 0);">
+          <img class="ba-before block h-full w-full object-cover" src="assets/before-after/Before_pic_3.jpg" alt="Before — overgrown yard" draggable="false" />
+        </div>
+        <div class="absolute top-3 left-3 text-[10px] tracking-[0.18em] uppercase font-semibold text-white/95 bg-black/60 px-2.5 py-1 rounded-full backdrop-blur">Before</div>
+        <div class="absolute top-3 right-3 text-[10px] tracking-[0.18em] uppercase font-semibold text-white bg-brand/90 px-2.5 py-1 rounded-full">After</div>
+        <div class="ba-handle absolute top-0 bottom-0 w-[2px] bg-white/90 pointer-events-none" style="left: calc(50% - 1px);">
+          <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 h-10 w-10 rounded-full bg-white shadow-[0_6px_20px_rgba(0,0,0,0.35)] flex items-center justify-center">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" class="text-ink"><polyline points="15 18 9 12 15 6"></polyline><polyline points="9 18 15 12 9 6" transform="translate(6 0)"></polyline></svg>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<script>
+  (function () {
+    document.querySelectorAll('.ba-card').forEach((card) => {
+      const beforeWrap = card.querySelector('.ba-before-wrap');
+      const handle = card.querySelector('.ba-handle');
+      let dragging = false;
+
+      function setPos(p) {
+        const pos = Math.max(0, Math.min(100, p));
+        beforeWrap.style.clipPath = `inset(0 ${100 - pos}% 0 0)`;
+        handle.style.left = `calc(${pos}% - 1px)`;
+      }
+      function moveFromClientX(clientX) {
+        const rect = card.getBoundingClientRect();
+        setPos(((clientX - rect.left) / rect.width) * 100);
+      }
+      card.addEventListener('mousedown', (e) => { dragging = true; moveFromClientX(e.clientX); });
+      card.addEventListener('mousemove', (e) => { if (dragging) moveFromClientX(e.clientX); });
+      card.addEventListener('mouseleave', () => { dragging = false; });
+      window.addEventListener('mouseup', () => { dragging = false; });
+      card.addEventListener('touchstart', (e) => { dragging = true; moveFromClientX(e.touches[0].clientX); }, { passive: true });
+      card.addEventListener('touchmove', (e) => { if (dragging) moveFromClientX(e.touches[0].clientX); }, { passive: true });
+      card.addEventListener('touchend', () => { dragging = false; });
+    });
+  })();
+</script>
+
 <!-- SERVICES -->
 <section id="services" class="py-28 md:py-36 relative border-t border-white/5 bg-gradient-to-b from-ink to-[#0A0D14]">
   <div class="max-w-[1400px] mx-auto px-6 md:px-10">
@@ -569,6 +654,7 @@ tailwind.config = {
   }
   #cg-stage .cg-cap .t{font-family:'Cabinet Grotesk','Satoshi',sans-serif;font-weight:800;font-size:18px;letter-spacing:-0.01em}
   #cg-stage .cg-cap .s{font-size:11px;letter-spacing:0.18em;text-transform:uppercase;color:#7BC3FF;margin-top:4px}
+
   #cg-stage.grabbing{ cursor: grabbing !important; }
 
   @media (max-width: 767px){
@@ -619,23 +705,24 @@ tailwind.config = {
   });
 
   let rotation = 0;
-  let velocity = 0;
+  let velocity = 0;          // deg per frame from user input
   let dragging = false;
   let lastX = 0;
   let lastMoveTs = 0;
   let idleSince = performance.now();
 
-  const AUTO_SPEED = 0.08;
-  const DRAG_TO_DEG = 0.35;
-  const WHEEL_TO_DEG = 0.25;
-  const FRICTION = 0.94;
-  const IDLE_MS = 1400;
+  const AUTO_SPEED = 0.08;           // idle spin
+  const DRAG_TO_DEG = 0.35;          // px -> degrees
+  const WHEEL_TO_DEG = 0.25;         // px -> degrees
+  const FRICTION = 0.94;             // inertia decay
+  const IDLE_MS = 1400;              // wait before auto-spin resumes
 
   function markActive(){ idleSince = performance.now() + 999999; }
   function releaseActive(){ idleSince = performance.now(); }
 
+  // Pointer drag (mouse + pen)
   stage.addEventListener('pointerdown', (e) => {
-    if(e.pointerType === 'touch') return;
+    if(e.pointerType === 'touch') return; // touch handled separately
     dragging = true;
     lastX = e.clientX;
     lastMoveTs = performance.now();
@@ -653,7 +740,7 @@ tailwind.config = {
     lastMoveTs = now;
     const deg = dx * DRAG_TO_DEG;
     rotation += deg;
-    velocity = deg * (16 / dt);
+    velocity = deg * (16 / dt); // normalize toward per-frame speed
   });
   function endDrag(e){
     if(!dragging) return;
@@ -666,6 +753,7 @@ tailwind.config = {
   stage.addEventListener('pointercancel', endDrag);
   stage.addEventListener('pointerleave', endDrag);
 
+  // Touch (swipe) — leaves vertical scroll to the page
   let touchLastX = 0, touchLastTs = 0, touchActive = false, touchStartY = 0, decided = false, horizontal = false;
   stage.addEventListener('touchstart', (e) => {
     if(e.touches.length !== 1) return;
@@ -688,7 +776,7 @@ tailwind.config = {
         horizontal = dx > dy;
       } else return;
     }
-    if(!horizontal) return;
+    if(!horizontal) return; // let the page scroll vertically
     if(e.cancelable) e.preventDefault();
     const dxMove = x - touchLastX;
     touchLastX = x;
@@ -707,6 +795,7 @@ tailwind.config = {
   stage.addEventListener('touchend', endTouch);
   stage.addEventListener('touchcancel', endTouch);
 
+  // Horizontal wheel / trackpad: spin; vertical wheel: let page scroll
   stage.addEventListener('wheel', (e) => {
     const absX = Math.abs(e.deltaX);
     const absY = Math.abs(e.deltaY);
@@ -836,7 +925,7 @@ tailwind.config = {
   <div class="max-w-[1400px] mx-auto px-6 md:px-10 grid grid-cols-12 gap-10">
     <div class="col-span-12 md:col-span-5">
       <div class="flex items-center gap-3">
-        <img src="/logo.JPG" alt="BR Lawn Care" class="h-10 w-10 rounded-full object-cover ring-1 ring-white/10" />
+        <img src="../logo.JPG" alt="BR Lawn Care" class="h-10 w-10 rounded-full object-cover ring-1 ring-white/10" />
         <div class="font-display text-xl tracking-crunch">BR Lawn Care</div>
       </div>
       <p class="mt-5 text-white/55 max-w-[42ch] text-sm leading-relaxed">

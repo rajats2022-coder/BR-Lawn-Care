@@ -83,7 +83,7 @@ BR Lawn Care operates across Eastern North Carolina and surrounding counties. If
 
 ## How to Get an Estimate
 
-The fastest path is the free estimate form at https://brlawncare.com/contact.html — it takes about 60 seconds. Attach or mention a few property photos, rough size, and the services you think you need (or just "not sure, you tell me").
+The fastest path is the free estimate form at https://brlawncare.com/site/contact.html — it takes about 60 seconds. Attach or mention a few property photos, rough size, and the services you think you need (or just "not sure, you tell me").
 
 Estimates are returned within 24 hours, usually same-day. For urgent jobs, call 252.503.0984 directly.
 
@@ -98,7 +98,7 @@ Monday through Saturday, 7:00 AM – 7:00 PM local time. Closed Sundays.
 ## Contact
 
 - **Phone:** 252.503.0984
-- **Estimate Form:** https://brlawncare.com/contact.html
+- **Estimate Form:** https://brlawncare.com/site/contact.html
 - **Website:** https://brlawncare.com
 - **Region:** Eastern North Carolina
 - **Hours:** Mon – Sat, 7am – 7pm
