@@ -154,6 +154,23 @@ tailwind.config = {
     section{padding-top:72px;padding-bottom:72px}
     .field > input,.field > select,.field > textarea{font-size:16px;padding:13px 14px}
     .btn{padding:.85rem 1.15rem;font-size:14px}
+    /* prevent grid items from forcing overflow */
+    .grid > *{min-width:0}
+    /* tailwind gap-10 (40px) × 11 gaps overflows narrow viewports — shrink */
+    .grid.gap-10, .grid.gap-8{gap:1rem}
+    .grid.md\:gap-10{gap:1rem}
+    p, li, .field > label{overflow-wrap:anywhere;word-break:break-word}
+    /* shrink form padding so content fits */
+    #estimate-form{padding:20px !important;border-radius:22px}
+    #estimate-form .grid{gap:1rem !important}
+    /* header row inside form: stack so "Takes ~60s" never clips */
+    #estimate-form > .flex.items-center.justify-between{flex-wrap:wrap;gap:.5rem}
+    /* pill selector tighter */
+    .pill label{padding:.5rem .8rem;font-size:12.5px}
+    /* footer: stack and shrink */
+    footer .grid{gap:2rem !important}
+    footer .col-span-6{grid-column:span 12 / span 12}
+    footer p{max-width:100% !important}
   }
 </style>
 </head>
