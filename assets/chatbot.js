@@ -341,8 +341,17 @@
       'aria-controls': 'brc-panel'
     });
     toggle.innerHTML = `
-      <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-        <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/>
+      <svg class="brc-robot" width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+        <line x1="12" y1="3" x2="12" y2="6"/>
+        <circle cx="12" cy="2.4" r="1.1" fill="currentColor" stroke="none"/>
+        <rect x="4" y="6" width="16" height="13" rx="3"/>
+        <line x1="2.5" y1="11" x2="4" y2="11"/>
+        <line x1="2.5" y1="14" x2="4" y2="14"/>
+        <line x1="20" y1="11" x2="21.5" y2="11"/>
+        <line x1="20" y1="14" x2="21.5" y2="14"/>
+        <circle class="brc-eye brc-eye-l" cx="9" cy="12" r="1.25" fill="currentColor" stroke="none"/>
+        <circle class="brc-eye brc-eye-r" cx="15" cy="12" r="1.25" fill="currentColor" stroke="none"/>
+        <path d="M9.5 16 h5"/>
       </svg>
       <span class="brc-dot" aria-hidden="true"></span>
     `;
