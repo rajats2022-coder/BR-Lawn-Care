@@ -2,7 +2,7 @@
 
 Marketing site for **BR Lawn Care** — locally owned lawn and landscape services across Eastern North Carolina.
 
-**Live:** https://brlawncare.com (pending)
+**Live:** https://brlawncarenc.com (pending)
 **Phone:** 252.503.0984
 
 ## Stack
@@ -45,7 +45,7 @@ Vercel will serve the site directly from the repo root.
 - LocalBusiness, WebSite, and FAQPage JSON-LD schemas embedded in `index.html`
 - ContactPage schema in `contact.html`
 - Open Graph + Twitter card tags for link sharing
-- Canonical URLs assume domain `brlawncare.com` — update in the `<head>` if the final domain differs
+- Canonical URLs assume domain `brlawncarenc.com` — update in the `<head>` if the final domain differs
 
 ## AI Discovery
 

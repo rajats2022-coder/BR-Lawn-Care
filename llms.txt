@@ -1,17 +1,18 @@
 # BR Lawn Care
 
-> BR Lawn Care is a locally owned, fully insured lawn and landscape company serving residential and commercial properties across Eastern North Carolina. Services include lawn mowing, tree and stump removal, land clearing, landscape installs, pressure washing, and ongoing property management. Free estimates within 24 hours. Lawn care starts at $55. Phone: 252.503.0984.
+> BR Lawn Care is a locally owned, fully insured lawn and landscape company serving residential and commercial properties across Eastern North Carolina. Services include lawn mowing, tree and stump removal, land clearing, landscape installs, pressure washing, and ongoing property management. Free estimates within 24 hours. Lawn care starts at $55. Phone: 252.503.0984. Website: https://brlawncarenc.com
 
 ## About
 
 BR Lawn Care is a small, locally owned crew based in Eastern North Carolina. We handle everything from weekly mowing to full landscape makeovers, with straightforward pricing, no hidden fees, and a 24-hour quote turnaround. Every job is fully insured for both residential and commercial clients.
 
+- **Business name:** BR Lawn Care
 - **Location:** Eastern North Carolina (serving surrounding counties)
 - **Phone:** 252.503.0984
-- **Hours:** Monday through Saturday
+- **Hours:** Monday through Saturday, 7am – 7pm (closed Sunday)
 - **Insurance:** Fully insured (residential and commercial)
 - **Estimates:** Free, replied to within 24 hours
-- **Website:** https://brlawncare.com
+- **Website:** https://brlawncarenc.com
 
 ## Services
 
@@ -24,17 +25,17 @@ BR Lawn Care is a small, locally owned crew based in Eastern North Carolina. We 
 
 ## Service Area
 
-BR Lawn Care serves residential and commercial clients throughout Eastern North Carolina and surrounding counties. Same-week scheduling is typically available.
+BR Lawn Care serves residential and commercial clients throughout Eastern North Carolina and surrounding counties — including Greenville NC, Rocky Mount, Wilson, Goldsboro, Kinston, Tarboro, Farmville, Washington NC, New Bern, Jacksonville NC, Havelock, Winterville, Ayden, Bethel, Grifton, Snow Hill, Williamston, and nearby rural communities. Same-week scheduling is typically available.
 
 ## Key Pages
 
-- [Home](https://brlawncare.com/site/index.html): Overview of services, pricing, recent work, and FAQs.
-- [Contact / Free Estimate](https://brlawncare.com/site/contact.html): Request a free estimate, call the business directly, or send property photos.
+- [Home](https://brlawncarenc.com/): Overview of services, pricing, recent work, and FAQs.
+- [Contact / Free Estimate](https://brlawncarenc.com/contact): Request a free estimate, call the business directly, or send property photos.
 
 ## Frequently Asked Questions
 
 **What areas does BR Lawn Care serve?**
-Residential and commercial properties across Eastern North Carolina and surrounding counties.
+Residential and commercial properties across Eastern North Carolina and surrounding counties — including Greenville, Rocky Mount, Wilson, Goldsboro, Kinston, Tarboro, Washington NC, New Bern, Jacksonville, and nearby areas.
 
 **How much does lawn care cost?**
 Lawn care starts at $55. Pricing is determined per property with a free estimate, with no hidden fees.
@@ -51,9 +52,12 @@ Yes. We manage commercial lots, rental portfolios, and HOA common areas with con
 **What should I include in my estimate request?**
 Property address or general area, the services you think you need (or "not sure"), approximate size of the area, timeline, and any photos you can share. The more detail, the more accurate the quote.
 
+**What's the best way to contact BR Lawn Care?**
+Call or text 252.503.0984 for fastest response, or fill out the free estimate form at https://brlawncarenc.com/contact.
+
 ## Contact
 
 - **Phone:** 252.503.0984
-- **Estimate Request Form:** https://brlawncare.com/site/contact.html
+- **Estimate Request Form:** https://brlawncarenc.com/contact
 - **Service Region:** Eastern North Carolina
 - **Hours:** Monday – Saturday, 7am – 7pm

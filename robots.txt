@@ -1,5 +1,5 @@
 # BR Lawn Care — robots.txt
-# https://brlawncare.com
+# https://brlawncarenc.com
 
 # Allow all standard search engines
 User-agent: *
@@ -83,4 +83,4 @@ User-agent: MistralAI-User
 Allow: /
 
 # Sitemap + llms.txt pointers
-Sitemap: https://brlawncare.com/sitemap.xml
+Sitemap: https://brlawncarenc.com/sitemap.xml
