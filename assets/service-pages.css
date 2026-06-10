@@ -24,12 +24,18 @@ img,svg{max-width:100%;height:auto}
 .nav-dropdown a{display:grid;gap:2px;padding:11px 12px;border-radius:14px;color:rgba(255,255,255,.82);transition:background .2s,color .2s}
 .nav-dropdown a:hover,.nav-dropdown a:focus-visible{background:rgba(42,165,255,.1);color:#fff}
 .nav-dropdown small{color:rgba(255,255,255,.45);font-size:11px;line-height:1.35}
+  .nav-dropdown-wide{width:min(620px,calc(100vw - 32px));display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:2px}
+  .nav-dropdown-wide .nav-feature-link{grid-column:1/-1;background:rgba(42,165,255,.08);border:1px solid rgba(42,165,255,.18)}
 #mobile-menu{transform:translateY(-12px);opacity:0;pointer-events:none;transition:opacity .25s ease,transform .25s ease;touch-action:pan-y}
 #mobile-menu.open{transform:translateY(0);opacity:1;pointer-events:auto}
 .mobile-services-list{display:none}
+  .mobile-areas-list{display:none}
 .mobile-services.open .mobile-services-list{display:grid}
+  .mobile-areas.open .mobile-areas-list{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));column-gap:14px}
 .mobile-services svg{transition:transform .2s ease}
+  .mobile-areas svg{transition:transform .2s ease}
 .mobile-services.open svg{transform:rotate(180deg)}
+  .mobile-areas.open svg{transform:rotate(180deg)}
 .hamburger span{display:block;width:22px;height:2px;background:#fff;border-radius:2px;transition:transform .25s ease,opacity .2s ease}
 .hamburger span + span{margin-top:5px}
 .hamburger.open span:nth-child(1){transform:translateY(7px) rotate(45deg)}
@@ -56,6 +62,7 @@ img,svg{max-width:100%;height:auto}
   .service-card{border-radius:22px}
   #mobile-menu{position:fixed;top:4.75rem;left:1rem;right:1rem;bottom:auto;height:calc(100dvh - 5.75rem);max-height:calc(100dvh - 5.75rem);margin:0;overflow-y:auto;-webkit-overflow-scrolling:touch;overscroll-behavior:contain;padding:1rem 1.25rem 1.5rem}
   .mobile-services-toggle{touch-action:manipulation}
+  .mobile-areas-toggle{touch-action:manipulation}
   p,li,a,span{overflow-wrap:anywhere}
 }
 @supports not (overflow:clip){main,section,header,footer{overflow-x:hidden}}
