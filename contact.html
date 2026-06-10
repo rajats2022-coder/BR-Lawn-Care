@@ -207,6 +207,10 @@ tailwind.config = {
   /* mobile menu */
   #mobile-menu{transform:translateY(-12px);opacity:0;pointer-events:none;transition:opacity .25s ease,transform .25s ease}
   #mobile-menu.open{transform:translateY(0);opacity:1;pointer-events:auto}
+  .mobile-services-list{display:none}
+  .mobile-services.open .mobile-services-list{display:grid}
+  .mobile-services svg{transition:transform .2s ease}
+  .mobile-services.open svg{transform:rotate(180deg)}
   .hamburger span{display:block;width:22px;height:2px;background:#fff;border-radius:2px;transition:transform .25s ease,opacity .2s ease}
   .hamburger span + span{margin-top:5px}
   .hamburger.open span:nth-child(1){transform:translateY(7px) rotate(45deg)}
@@ -286,13 +290,20 @@ tailwind.config = {
   <div id="mobile-menu" class="md:hidden absolute top-16 inset-x-0 mx-4 rounded-2xl bg-elevated/95 backdrop-blur border border-white/10 shadow-tile p-5" role="dialog" aria-label="Mobile navigation">
     <nav class="flex flex-col divide-y divide-white/6">
       <a href="index.html" class="py-4 text-white/85 flex items-center justify-between"><span>Home</span><span class="text-brand">→</span></a>
-      <a href="index.html#services" class="py-4 text-white/85 flex items-center justify-between"><span>Services</span><span class="text-brand">→</span></a>
-      <a href="services/lawn-care.html" class="py-3 pl-4 text-white/70 flex items-center justify-between"><span>Lawn Care</span><span class="text-brand">→</span></a>
-      <a href="services/tree-stump-removal.html" class="py-3 pl-4 text-white/70 flex items-center justify-between"><span>Tree &amp; Stump Removal</span><span class="text-brand">→</span></a>
-      <a href="services/landscape-installs.html" class="py-3 pl-4 text-white/70 flex items-center justify-between"><span>Landscape Installs</span><span class="text-brand">→</span></a>
-      <a href="services/land-clearing.html" class="py-3 pl-4 text-white/70 flex items-center justify-between"><span>Land Clearing</span><span class="text-brand">→</span></a>
-      <a href="services/pressure-washing.html" class="py-3 pl-4 text-white/70 flex items-center justify-between"><span>Pressure Washing</span><span class="text-brand">→</span></a>
-      <a href="services/property-management.html" class="py-3 pl-4 text-white/70 flex items-center justify-between"><span>Property Management</span><span class="text-brand">→</span></a>
+      <div class="mobile-services py-1">
+        <button type="button" class="mobile-services-toggle w-full py-4 text-white/85 flex items-center justify-between text-left" aria-expanded="false">
+          <span>Services</span>
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg>
+        </button>
+        <div class="mobile-services-list pb-3 pl-4 gap-1">
+          <a href="services/lawn-care.html" class="py-2 text-white/70 flex items-center justify-between"><span>Lawn Care</span><span class="text-brand">→</span></a>
+          <a href="services/tree-stump-removal.html" class="py-2 text-white/70 flex items-center justify-between"><span>Tree &amp; Stump Removal</span><span class="text-brand">→</span></a>
+          <a href="services/landscape-installs.html" class="py-2 text-white/70 flex items-center justify-between"><span>Landscape Installs</span><span class="text-brand">→</span></a>
+          <a href="services/land-clearing.html" class="py-2 text-white/70 flex items-center justify-between"><span>Land Clearing</span><span class="text-brand">→</span></a>
+          <a href="services/pressure-washing.html" class="py-2 text-white/70 flex items-center justify-between"><span>Pressure Washing</span><span class="text-brand">→</span></a>
+          <a href="services/property-management.html" class="py-2 text-white/70 flex items-center justify-between"><span>Property Management</span><span class="text-brand">→</span></a>
+        </div>
+      </div>
       <a href="index.html#work" class="py-4 text-white/85 flex items-center justify-between"><span>Our Work</span><span class="text-brand">→</span></a>
       <a href="index.html#about" class="py-4 text-white/85 flex items-center justify-between"><span>About</span><span class="text-brand">→</span></a>
     </nav>
@@ -302,11 +313,14 @@ tailwind.config = {
 <script>
   (function(){
     const btn=document.getElementById('menu-btn');const menu=document.getElementById('mobile-menu');
+    const services=document.querySelector('.mobile-services');const servicesToggle=document.querySelector('.mobile-services-toggle');
     if(!btn||!menu)return;
     const toggle=(f)=>{const o=f!==undefined?f:!menu.classList.contains('open');menu.classList.toggle('open',o);btn.classList.toggle('open',o);btn.setAttribute('aria-expanded',o?'true':'false');};
+    const toggleServices=(f)=>{if(!services||!servicesToggle)return;const o=f!==undefined?f:!services.classList.contains('open');services.classList.toggle('open',o);servicesToggle.setAttribute('aria-expanded',o?'true':'false');};
     btn.addEventListener('click',()=>toggle());
+    servicesToggle?.addEventListener('click',e=>{e.preventDefault();toggleServices();});
     menu.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>toggle(false)));
-    document.addEventListener('keydown',e=>{if(e.key==='Escape')toggle(false);});
+    document.addEventListener('keydown',e=>{if(e.key==='Escape'){toggle(false);toggleServices(false);}});
   })();
 </script>
 
