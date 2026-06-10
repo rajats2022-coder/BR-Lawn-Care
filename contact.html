@@ -153,6 +153,21 @@ tailwind.config = {
   .btn-ghost{color:#EAF2FF;border:1px solid rgba(255,255,255,0.14);background:rgba(255,255,255,0.02)}
   .btn-ghost:hover{border-color:#2AA5FF;color:#fff;background:rgba(42,165,255,0.06)}
   .navblur{backdrop-filter:saturate(140%) blur(14px);-webkit-backdrop-filter:saturate(140%) blur(14px);background:rgba(11,14,20,0.55);border-bottom:1px solid rgba(255,255,255,0.06)}
+  .nav-item{position:relative}
+  .nav-trigger{display:inline-flex;align-items:center;gap:.45rem;color:rgba(255,255,255,.8);transition:color .2s}
+  .nav-trigger:hover,.nav-item:focus-within .nav-trigger{color:#fff}
+  .nav-trigger svg{transition:transform .2s}
+  .nav-item:hover .nav-trigger svg,.nav-item:focus-within .nav-trigger svg{transform:rotate(180deg)}
+  .nav-dropdown{
+    position:absolute;top:calc(100% + 16px);left:50%;width:286px;transform:translate(-50%,-8px);
+    opacity:0;pointer-events:none;transition:opacity .2s ease,transform .2s ease;
+    padding:10px;border:1px solid rgba(255,255,255,.1);border-radius:20px;
+    background:rgba(12,16,24,.96);box-shadow:0 24px 70px rgba(0,0,0,.38);backdrop-filter:blur(18px)
+  }
+  .nav-item:hover .nav-dropdown,.nav-item:focus-within .nav-dropdown{opacity:1;pointer-events:auto;transform:translate(-50%,0)}
+  .nav-dropdown a{display:grid;gap:2px;padding:11px 12px;border-radius:14px;color:rgba(255,255,255,.82);transition:background .2s,color .2s}
+  .nav-dropdown a:hover,.nav-dropdown a:focus-visible{background:rgba(42,165,255,.1);color:#fff}
+  .nav-dropdown small{color:rgba(255,255,255,.45);font-size:11px;line-height:1.35}
   /* form */
   .field{display:flex;flex-direction:column;gap:.5rem}
   .field > label{font-size:12px;font-weight:600;letter-spacing:0.12em;text-transform:uppercase;color:#A4AEBD}
@@ -238,7 +253,19 @@ tailwind.config = {
       </div>
     </a>
     <nav class="hidden md:flex items-center gap-10 text-sm text-white/80" aria-label="Primary">
-      <a href="index.html#services" class="hover:text-white transition-colors">Services</a>
+      <div class="nav-item">
+        <a href="index.html#services" class="nav-trigger">Services
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg>
+        </a>
+        <div class="nav-dropdown" aria-label="Service pages">
+          <a href="services/lawn-care.html"><span>Lawn Care</span><small>Mowing, edging, trimming, cleanup</small></a>
+          <a href="services/tree-stump-removal.html"><span>Tree &amp; Stump Removal</span><small>Tree work, takedowns, stump grinding</small></a>
+          <a href="services/landscape-installs.html"><span>Landscape Installs</span><small>Sod, mulch, rock, yard makeovers</small></a>
+          <a href="services/land-clearing.html"><span>Land Clearing</span><small>Brush, lots, downed trees, debris</small></a>
+          <a href="services/pressure-washing.html"><span>Pressure Washing</span><small>Driveways, siding, decks, patios</small></a>
+          <a href="services/property-management.html"><span>Property Management</span><small>Ongoing grounds maintenance</small></a>
+        </div>
+      </div>
       <a href="index.html#work" class="hover:text-white transition-colors">Our Work</a>
       <a href="index.html#about" class="hover:text-white transition-colors">About</a>
       <a href="contact.html" class="hover:text-white transition-colors">Contact</a>
@@ -260,6 +287,12 @@ tailwind.config = {
     <nav class="flex flex-col divide-y divide-white/6">
       <a href="index.html" class="py-4 text-white/85 flex items-center justify-between"><span>Home</span><span class="text-brand">→</span></a>
       <a href="index.html#services" class="py-4 text-white/85 flex items-center justify-between"><span>Services</span><span class="text-brand">→</span></a>
+      <a href="services/lawn-care.html" class="py-3 pl-4 text-white/70 flex items-center justify-between"><span>Lawn Care</span><span class="text-brand">→</span></a>
+      <a href="services/tree-stump-removal.html" class="py-3 pl-4 text-white/70 flex items-center justify-between"><span>Tree &amp; Stump Removal</span><span class="text-brand">→</span></a>
+      <a href="services/landscape-installs.html" class="py-3 pl-4 text-white/70 flex items-center justify-between"><span>Landscape Installs</span><span class="text-brand">→</span></a>
+      <a href="services/land-clearing.html" class="py-3 pl-4 text-white/70 flex items-center justify-between"><span>Land Clearing</span><span class="text-brand">→</span></a>
+      <a href="services/pressure-washing.html" class="py-3 pl-4 text-white/70 flex items-center justify-between"><span>Pressure Washing</span><span class="text-brand">→</span></a>
+      <a href="services/property-management.html" class="py-3 pl-4 text-white/70 flex items-center justify-between"><span>Property Management</span><span class="text-brand">→</span></a>
       <a href="index.html#work" class="py-4 text-white/85 flex items-center justify-between"><span>Our Work</span><span class="text-brand">→</span></a>
       <a href="index.html#about" class="py-4 text-white/85 flex items-center justify-between"><span>About</span><span class="text-brand">→</span></a>
     </nav>
@@ -436,12 +469,12 @@ tailwind.config = {
     <div class="col-span-6 md:col-span-3">
       <div class="eyebrow mb-4">Services</div>
       <ul class="space-y-2 text-sm text-white/65">
-        <li>Lawn Care</li>
-        <li>Tree &amp; Stump Removal</li>
-        <li>Landscape Installs</li>
-        <li>Land Clearing</li>
-        <li>Pressure Washing</li>
-        <li>Property Management</li>
+        <li><a href="services/lawn-care.html" class="hover:text-white">Lawn Care</a></li>
+        <li><a href="services/tree-stump-removal.html" class="hover:text-white">Tree &amp; Stump Removal</a></li>
+        <li><a href="services/landscape-installs.html" class="hover:text-white">Landscape Installs</a></li>
+        <li><a href="services/land-clearing.html" class="hover:text-white">Land Clearing</a></li>
+        <li><a href="services/pressure-washing.html" class="hover:text-white">Pressure Washing</a></li>
+        <li><a href="services/property-management.html" class="hover:text-white">Property Management</a></li>
       </ul>
     </div>
     <div class="col-span-6 md:col-span-4">

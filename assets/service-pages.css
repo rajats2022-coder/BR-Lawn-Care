@@ -1,0 +1,32 @@
+body{margin:0;background:#0B0E14;color:#fff;font-family:Satoshi,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif}
+.display{font-family:"Cabinet Grotesk",Satoshi,system-ui,sans-serif;font-weight:900;letter-spacing:-.035em;line-height:.94}
+.eyebrow{font-size:12px;font-weight:800;letter-spacing:.22em;text-transform:uppercase;color:#2AA5FF}
+.navblur{backdrop-filter:saturate(140%) blur(14px);-webkit-backdrop-filter:saturate(140%) blur(14px);background:rgba(11,14,20,.72);border-bottom:1px solid rgba(255,255,255,.06)}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:.6rem;border-radius:999px;padding:1rem 1.35rem;font-weight:900;transition:transform .2s,background .2s,border-color .2s}
+.btn-primary{background:#2AA5FF;color:#06101E;box-shadow:0 18px 40px -18px rgba(42,165,255,.65)}
+.btn-primary:hover{background:#49B4FF;transform:translateY(-1px)}
+.btn-ghost{color:#EAF2FF;border:1px solid rgba(255,255,255,.14);background:rgba(255,255,255,.02)}
+.btn-ghost:hover{border-color:#2AA5FF;color:#fff;background:rgba(42,165,255,.06)}
+.nav-item{position:relative}
+.nav-trigger{display:inline-flex;align-items:center;gap:.45rem;color:rgba(255,255,255,.8);transition:color .2s}
+.nav-trigger:hover,.nav-item:focus-within .nav-trigger{color:#fff}
+.nav-trigger svg{transition:transform .2s}
+.nav-item:hover .nav-trigger svg,.nav-item:focus-within .nav-trigger svg{transform:rotate(180deg)}
+.nav-dropdown{position:absolute;top:calc(100% + 16px);left:50%;width:286px;transform:translate(-50%,-8px);opacity:0;pointer-events:none;transition:opacity .2s ease,transform .2s ease;padding:10px;border:1px solid rgba(255,255,255,.1);border-radius:20px;background:rgba(12,16,24,.96);box-shadow:0 24px 70px rgba(0,0,0,.38);backdrop-filter:blur(18px)}
+.nav-item:hover .nav-dropdown,.nav-item:focus-within .nav-dropdown{opacity:1;pointer-events:auto;transform:translate(-50%,0)}
+.nav-dropdown a{display:grid;gap:2px;padding:11px 12px;border-radius:14px;color:rgba(255,255,255,.82);transition:background .2s,color .2s}
+.nav-dropdown a:hover,.nav-dropdown a:focus-visible{background:rgba(42,165,255,.1);color:#fff}
+.nav-dropdown small{color:rgba(255,255,255,.45);font-size:11px;line-height:1.35}
+#mobile-menu{transform:translateY(-12px);opacity:0;pointer-events:none;transition:opacity .25s ease,transform .25s ease}
+#mobile-menu.open{transform:translateY(0);opacity:1;pointer-events:auto}
+.hamburger span{display:block;width:22px;height:2px;background:#fff;border-radius:2px;transition:transform .25s ease,opacity .2s ease}
+.hamburger span + span{margin-top:5px}
+.hamburger.open span:nth-child(1){transform:translateY(7px) rotate(45deg)}
+.hamburger.open span:nth-child(2){opacity:0}
+.hamburger.open span:nth-child(3){transform:translateY(-7px) rotate(-45deg)}
+.service-card{border:1px solid rgba(255,255,255,.09);border-radius:28px;background:rgba(255,255,255,.035);box-shadow:0 24px 80px rgba(0,0,0,.28)}
+.service-photo{border-radius:28px;object-fit:cover;min-height:360px;max-height:560px;width:100%}
+.copy p,.copy li{color:rgba(255,255,255,.66);line-height:1.75}
+.copy strong{color:#fff}
+:focus-visible{outline:2px solid #2AA5FF;outline-offset:3px;border-radius:6px}
+@media(max-width:767px){.display{letter-spacing:-.025em}.btn{padding:.85rem 1.15rem;font-size:14px}.service-photo{min-height:280px}p,li{overflow-wrap:anywhere}}
