@@ -144,3 +144,7 @@ Monday through Saturday, 7:00 AM – 7:00 PM local time. Closed Sundays.
 4. **Honest pricing** — no hidden fees, no upsell pressure
 5. **One crew, one invoice** — residential, commercial, and recurring accounts all handled by the same team
 6. **Locally owned** — built and run in Eastern North Carolina
+
+## Service-area landing page hub
+
+BR Lawn Care has crawlable service-by-city pages at https://brlawncarenc.com/service-areas. The hub links every confirmed service to every listed Eastern NC city, including Greenville, Rocky Mount, Wilson, Goldsboro, Kinston, Tarboro, Farmville, Washington, New Bern, Jacksonville, Havelock, Winterville, Ayden, Bethel, Grifton, Snow Hill, Williamston.

@@ -59,3 +59,11 @@ img,svg{max-width:100%;height:auto}
   p,li,a,span{overflow-wrap:anywhere}
 }
 @supports not (overflow:clip){main,section,header,footer{overflow-x:hidden}}
+
+.area-link-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:14px}
+.area-link-card{display:grid;gap:4px;padding:18px;border:1px solid rgba(255,255,255,.09);border-radius:18px;background:rgba(255,255,255,.035);color:rgba(255,255,255,.86);transition:background .2s,border-color .2s,transform .2s}
+.area-link-card:hover,.area-link-card:focus-visible{background:rgba(42,165,255,.08);border-color:rgba(42,165,255,.35);transform:translateY(-1px);color:#fff}
+.area-link-card span{font-weight:800}
+.area-link-card small{color:rgba(255,255,255,.52);line-height:1.45}
+.city-service-block{display:grid;gap:22px;padding:28px 0;border-top:1px solid rgba(255,255,255,.08)}
+@media(max-width:767px){.area-link-grid{grid-template-columns:1fr}.area-link-card{border-radius:16px;padding:16px}.city-service-block{padding:24px 0}}
