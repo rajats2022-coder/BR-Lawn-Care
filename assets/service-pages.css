@@ -19,14 +19,14 @@ img,svg{max-width:100%;height:auto}
 .nav-trigger:hover,.nav-item:focus-within .nav-trigger{color:#fff}
 .nav-trigger svg{transition:transform .2s}
 .nav-item:hover .nav-trigger svg,.nav-item:focus-within .nav-trigger svg{transform:rotate(180deg)}
-.nav-dropdown{position:absolute;top:calc(100% + 16px);left:50%;width:286px;transform:translate(-50%,-8px);opacity:0;pointer-events:none;transition:opacity .2s ease,transform .2s ease;padding:10px;border:1px solid rgba(255,255,255,.1);border-radius:20px;background:rgba(12,16,24,.96);box-shadow:0 24px 70px rgba(0,0,0,.38);backdrop-filter:blur(18px)}
+.nav-dropdown{position:absolute;top:calc(100% + 16px);left:50%;width:286px;max-height:calc(100vh - 104px);overflow-y:auto;transform:translate(-50%,-8px);opacity:0;pointer-events:none;transition:opacity .2s ease,transform .2s ease;padding:10px;border:1px solid rgba(255,255,255,.1);border-radius:20px;background:rgba(12,16,24,.96);box-shadow:0 24px 70px rgba(0,0,0,.38);backdrop-filter:blur(18px)}
 .nav-item:hover .nav-dropdown,.nav-item:focus-within .nav-dropdown{opacity:1;pointer-events:auto;transform:translate(-50%,0)}
 .nav-dropdown a{display:grid;gap:2px;padding:11px 12px;border-radius:14px;color:rgba(255,255,255,.82);transition:background .2s,color .2s}
 .nav-dropdown a:hover,.nav-dropdown a:focus-visible{background:rgba(42,165,255,.1);color:#fff}
 .nav-dropdown small{color:rgba(255,255,255,.45);font-size:11px;line-height:1.35}
   .nav-dropdown-wide{width:min(620px,calc(100vw - 32px));display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:2px}
   .nav-dropdown-wide .nav-feature-link{grid-column:1/-1;background:rgba(42,165,255,.08);border:1px solid rgba(42,165,255,.18)}
-#mobile-menu{transform:translateY(-12px);opacity:0;pointer-events:none;transition:opacity .25s ease,transform .25s ease;touch-action:pan-y}
+#mobile-menu{transform:translateY(-12px);opacity:0;pointer-events:none;transition:opacity .25s ease,transform .25s ease;touch-action:pan-y;background:#12161F}
 #mobile-menu.open{transform:translateY(0);opacity:1;pointer-events:auto}
 .mobile-services-list{display:none}
   .mobile-areas-list{display:none}
@@ -42,7 +42,7 @@ img,svg{max-width:100%;height:auto}
 .hamburger.open span:nth-child(2){opacity:0}
 .hamburger.open span:nth-child(3){transform:translateY(-7px) rotate(-45deg)}
 .service-card{border:1px solid rgba(255,255,255,.09);border-radius:28px;background:rgba(255,255,255,.035);box-shadow:0 24px 80px rgba(0,0,0,.28)}
-.service-photo{border-radius:28px;object-fit:cover;min-height:360px;max-height:560px;width:100%}
+.service-photo{border-radius:28px;object-fit:cover;object-position:center;aspect-ratio:4/5;max-height:620px;width:100%;background:#12161F}
 .copy p,.copy li{color:rgba(255,255,255,.66);line-height:1.75}
 .copy strong{color:#fff}
 :focus-visible{outline:2px solid #2AA5FF;outline-offset:3px;border-radius:6px}
@@ -64,6 +64,10 @@ img,svg{max-width:100%;height:auto}
   .mobile-services-toggle{touch-action:manipulation}
   .mobile-areas-toggle{touch-action:manipulation}
   p,li,a,span{overflow-wrap:anywhere}
+}
+@media(max-width:380px){
+  h1.display{font-size:clamp(31px,9.2vw,38px)!important}
+  main section{padding-left:1rem!important;padding-right:1rem!important}
 }
 @supports not (overflow:clip){main,section,header,footer{overflow-x:hidden}}
 

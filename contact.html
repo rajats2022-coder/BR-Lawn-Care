@@ -7,7 +7,7 @@
 <meta name="format-detection" content="telephone=yes" />
 
 <title>Free Estimate | BR Lawn Care — Eastern NC Lawn &amp; Landscape</title>
-<meta name="description" content="Request a free lawn care, tree removal, land clearing, or landscape estimate from BR Lawn Care. Locally owned, fully insured, 24-hour reply across Eastern North Carolina. Call 252.503.0984." />
+<meta name="description" content="Request a free lawn, landscape, tree, clearing, pressure-washing, or grounds estimate from BR Lawn Care across Eastern North Carolina." />
 <meta name="keywords" content="free lawn care estimate Eastern NC, Greenville NC lawn quote, Rocky Mount landscaping estimate, Wilson NC tree removal quote, Goldsboro land clearing estimate, BR Lawn Care contact, brlawncarenc.com" />
 <meta name="author" content="BR Lawn Care" />
 <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1" />
@@ -63,7 +63,7 @@
     "name": "BR Lawn Care",
     "telephone": "+1-252-503-0984",
     "url": "https://brlawncarenc.com/",
-    "image": "https://brlawncarenc.com/assets/photos/IMG_0301.jpg",
+    "image": "https://brlawncarenc.com/assets/photos/IMG_0301.webp",
     "logo": "https://brlawncarenc.com/logo.JPG",
     "priceRange": "$$",
     "address": {
@@ -166,7 +166,7 @@ tailwind.config = {
   .nav-trigger svg{transition:transform .2s}
   .nav-item:hover .nav-trigger svg,.nav-item:focus-within .nav-trigger svg{transform:rotate(180deg)}
   .nav-dropdown{
-    position:absolute;top:calc(100% + 16px);left:50%;width:286px;transform:translate(-50%,-8px);
+    position:absolute;top:calc(100% + 16px);left:50%;width:286px;max-height:calc(100vh - 104px);overflow-y:auto;transform:translate(-50%,-8px);
     opacity:0;pointer-events:none;transition:opacity .2s ease,transform .2s ease;
     padding:10px;border:1px solid rgba(255,255,255,.1);border-radius:20px;
     background:rgba(12,16,24,.96);box-shadow:0 24px 70px rgba(0,0,0,.38);backdrop-filter:blur(18px)
@@ -212,12 +212,16 @@ tailwind.config = {
   .pill label:hover{border-color:rgba(42,165,255,0.5);color:#fff}
   .pill input:checked + label{background:#2AA5FF;color:#06101E;border-color:#2AA5FF;box-shadow:0 10px 26px -10px rgba(42,165,255,0.6)}
   /* mobile menu */
-  #mobile-menu{transform:translateY(-12px);opacity:0;pointer-events:none;transition:opacity .25s ease,transform .25s ease;touch-action:pan-y}
+  #mobile-menu{transform:translateY(-12px);opacity:0;pointer-events:none;transition:opacity .25s ease,transform .25s ease;touch-action:pan-y;background:#12161F}
   #mobile-menu.open{transform:translateY(0);opacity:1;pointer-events:auto}
   .mobile-services-list{display:none}
+  .mobile-areas-list{display:none}
   .mobile-services.open .mobile-services-list{display:grid}
+  .mobile-areas.open .mobile-areas-list{display:grid;grid-template-columns:1fr}
   .mobile-services svg{transition:transform .2s ease}
+  .mobile-areas svg{transition:transform .2s ease}
   .mobile-services.open svg{transform:rotate(180deg)}
+  .mobile-areas.open svg{transform:rotate(180deg)}
   .hamburger span{display:block;width:22px;height:2px;background:#fff;border-radius:2px;transition:transform .25s ease,opacity .2s ease}
   .hamburger span + span{margin-top:5px}
   .hamburger.open span:nth-child(1){transform:translateY(7px) rotate(45deg)}
@@ -261,7 +265,7 @@ tailwind.config = {
 <!-- NAV -->
 <header class="fixed top-0 inset-x-0 z-50 navblur">
   <div class="max-w-[1400px] mx-auto px-5 md:px-10 h-16 flex items-center justify-between">
-    <a href="index.html" class="flex items-center gap-3 group" aria-label="BR Lawn Care home">
+    <a href="/" class="flex items-center gap-3 group" aria-label="BR Lawn Care home">
       <img src="logo.JPG" alt="BR Lawn Care logo" class="h-9 w-9 rounded-full object-cover ring-1 ring-white/10" />
       <div class="leading-none">
         <div class="display text-[17px]">BR Lawn Care</div>
@@ -270,49 +274,49 @@ tailwind.config = {
     </a>
     <nav class="hidden md:flex items-center gap-8 text-sm text-white/80" aria-label="Primary">
       <div class="nav-item">
-        <a href="index.html#services" class="nav-trigger">Services
+        <a href="/#services" class="nav-trigger">Services
           <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg>
         </a>
         <div class="nav-dropdown" aria-label="Service pages">
-          <a href="services/lawn-care.html"><span>Lawn Care</span><small>mowing, edging, trimming, and cleanup</small></a>
-          <a href="services/tree-stump-removal.html"><span>Tree & Stump Removal</span><small>tree work, stump grinding, cleanup, and haul-off</small></a>
-          <a href="services/landscape-installs.html"><span>Landscape Installs</span><small>sod, mulch, rock, bed refreshes, and yard makeovers</small></a>
-          <a href="services/land-clearing.html"><span>Land Clearing</span><small>brush, overgrown lots, downed trees, and debris removal</small></a>
-          <a href="services/pressure-washing.html"><span>Pressure Washing</span><small>driveways, siding, decks, patios, and walkways</small></a>
-          <a href="services/property-management.html"><span>Property Management</span><small>ongoing grounds maintenance for rentals, HOAs, and commercial lots</small></a>
+          <a href="/services/lawn-care"><span>Lawn Care</span><small>mowing, edging, trimming, and cleanup</small></a>
+          <a href="/services/tree-stump-removal"><span>Tree & Stump Removal</span><small>tree work, stump grinding, cleanup, and haul-off</small></a>
+          <a href="/services/landscape-installs"><span>Landscape Installs</span><small>sod, mulch, rock, bed refreshes, and yard makeovers</small></a>
+          <a href="/services/land-clearing"><span>Land Clearing</span><small>brush, overgrown lots, downed trees, and debris removal</small></a>
+          <a href="/services/pressure-washing"><span>Pressure Washing</span><small>driveways, siding, decks, patios, and walkways</small></a>
+          <a href="/services/property-management"><span>Property Management</span><small>ongoing grounds maintenance for rentals, HOAs, and commercial lots</small></a>
         </div>
       </div>
       <div class="nav-item">
-        <a href="service-areas.html" class="nav-trigger">Service Areas
+        <a href="/service-areas" class="nav-trigger">Service Areas
           <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg>
         </a>
         <div class="nav-dropdown nav-dropdown-wide" aria-label="Service area city pages">
-          <a href="service-areas.html" class="nav-feature-link"><span>All Service Areas</span><small>Every city with every service</small></a>
-          <a href="service-areas.html#greenville"><span>Greenville</span><small>Greenville service pages</small></a>
-          <a href="service-areas.html#rocky-mount"><span>Rocky Mount</span><small>Rocky Mount service pages</small></a>
-          <a href="service-areas.html#wilson"><span>Wilson</span><small>Wilson service pages</small></a>
-          <a href="service-areas.html#goldsboro"><span>Goldsboro</span><small>Goldsboro service pages</small></a>
-          <a href="service-areas.html#kinston"><span>Kinston</span><small>Kinston service pages</small></a>
-          <a href="service-areas.html#tarboro"><span>Tarboro</span><small>Tarboro service pages</small></a>
-          <a href="service-areas.html#farmville"><span>Farmville</span><small>Farmville service pages</small></a>
-          <a href="service-areas.html#washington-nc"><span>Washington</span><small>Washington service pages</small></a>
-          <a href="service-areas.html#new-bern"><span>New Bern</span><small>New Bern service pages</small></a>
-          <a href="service-areas.html#jacksonville-nc"><span>Jacksonville</span><small>Jacksonville service pages</small></a>
-          <a href="service-areas.html#havelock"><span>Havelock</span><small>Havelock service pages</small></a>
-          <a href="service-areas.html#winterville"><span>Winterville</span><small>Winterville service pages</small></a>
-          <a href="service-areas.html#ayden"><span>Ayden</span><small>Ayden service pages</small></a>
-          <a href="service-areas.html#bethel"><span>Bethel</span><small>Bethel service pages</small></a>
-          <a href="service-areas.html#grifton"><span>Grifton</span><small>Grifton service pages</small></a>
-          <a href="service-areas.html#snow-hill"><span>Snow Hill</span><small>Snow Hill service pages</small></a>
-          <a href="service-areas.html#williamston"><span>Williamston</span><small>Williamston service pages</small></a>
+          <a href="/service-areas" class="nav-feature-link"><span>All Service Areas</span><small>Every city with every service</small></a>
+          <a href="/service-areas/greenville"><span>Greenville</span><small>Greenville service pages</small></a>
+          <a href="/service-areas/rocky-mount"><span>Rocky Mount</span><small>Rocky Mount service pages</small></a>
+          <a href="/service-areas/wilson"><span>Wilson</span><small>Wilson service pages</small></a>
+          <a href="/service-areas/goldsboro"><span>Goldsboro</span><small>Goldsboro service pages</small></a>
+          <a href="/service-areas/kinston"><span>Kinston</span><small>Kinston service pages</small></a>
+          <a href="/service-areas/tarboro"><span>Tarboro</span><small>Tarboro service pages</small></a>
+          <a href="/service-areas/farmville"><span>Farmville</span><small>Farmville service pages</small></a>
+          <a href="/service-areas/washington-nc"><span>Washington</span><small>Washington service pages</small></a>
+          <a href="/service-areas/new-bern"><span>New Bern</span><small>New Bern service pages</small></a>
+          <a href="/service-areas/jacksonville-nc"><span>Jacksonville</span><small>Jacksonville service pages</small></a>
+          <a href="/service-areas/havelock"><span>Havelock</span><small>Havelock service pages</small></a>
+          <a href="/service-areas/winterville"><span>Winterville</span><small>Winterville service pages</small></a>
+          <a href="/service-areas/ayden"><span>Ayden</span><small>Ayden service pages</small></a>
+          <a href="/service-areas/bethel"><span>Bethel</span><small>Bethel service pages</small></a>
+          <a href="/service-areas/grifton"><span>Grifton</span><small>Grifton service pages</small></a>
+          <a href="/service-areas/snow-hill"><span>Snow Hill</span><small>Snow Hill service pages</small></a>
+          <a href="/service-areas/williamston"><span>Williamston</span><small>Williamston service pages</small></a>
         </div>
       </div>
-      <a href="index.html#work" class="hover:text-white transition-colors">Our Work</a>
-      <a href="index.html#about" class="hover:text-white transition-colors">About</a>
-      <a href="contact.html" class="hover:text-white transition-colors">Contact</a>
+      <a href="/#work" class="hover:text-white transition-colors">Our Work</a>
+      <a href="/#about" class="hover:text-white transition-colors">About</a>
+      <a href="/contact" class="hover:text-white transition-colors">Contact</a>
     </nav>
     <div class="flex items-center gap-2">
-      <a href="contact.html" class="hidden md:inline-flex btn btn-primary !py-2 !px-4 text-sm">Free Estimate
+      <a href="/contact" class="hidden md:inline-flex btn btn-primary !py-2 !px-4 text-sm">Free Estimate
         <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"/><path d="M13 5l7 7-7 7"/></svg>
       </a>
       <a href="tel:2525030984" class="md:hidden inline-flex items-center justify-center w-11 h-11 rounded-full bg-brand text-[#06101E]" aria-label="Call BR Lawn Care">
@@ -323,19 +327,19 @@ tailwind.config = {
   </div>
   <div id="mobile-menu" class="md:hidden fixed top-16 left-4 right-4 max-h-[calc(100dvh-82px)] overflow-y-auto rounded-2xl bg-elevated/95 backdrop-blur border border-white/10 shadow-2xl p-5" role="dialog" aria-label="Mobile navigation">
     <nav class="flex flex-col divide-y divide-white/6">
-      <a href="index.html" class="py-4 text-white/85 flex items-center justify-between"><span>Home</span><span class="text-brand">→</span></a>
+      <a href="/" class="py-4 text-white/85 flex items-center justify-between"><span>Home</span><span class="text-brand">→</span></a>
       <div class="mobile-services py-1">
         <button type="button" class="mobile-services-toggle w-full py-4 text-white/85 flex items-center justify-between text-left" aria-expanded="false">
           <span>Services</span>
           <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg>
         </button>
         <div class="mobile-services-list pb-3 pl-4 gap-1">
-          <a href="services/lawn-care.html" class="py-2 text-white/70 flex items-center justify-between"><span>Lawn Care</span><span class="text-brand">→</span></a>
-          <a href="services/tree-stump-removal.html" class="py-2 text-white/70 flex items-center justify-between"><span>Tree & Stump Removal</span><span class="text-brand">→</span></a>
-          <a href="services/landscape-installs.html" class="py-2 text-white/70 flex items-center justify-between"><span>Landscape Installs</span><span class="text-brand">→</span></a>
-          <a href="services/land-clearing.html" class="py-2 text-white/70 flex items-center justify-between"><span>Land Clearing</span><span class="text-brand">→</span></a>
-          <a href="services/pressure-washing.html" class="py-2 text-white/70 flex items-center justify-between"><span>Pressure Washing</span><span class="text-brand">→</span></a>
-          <a href="services/property-management.html" class="py-2 text-white/70 flex items-center justify-between"><span>Property Management</span><span class="text-brand">→</span></a>
+          <a href="/services/lawn-care" class="py-2 text-white/70 flex items-center justify-between"><span>Lawn Care</span><span class="text-brand">→</span></a>
+          <a href="/services/tree-stump-removal" class="py-2 text-white/70 flex items-center justify-between"><span>Tree & Stump Removal</span><span class="text-brand">→</span></a>
+          <a href="/services/landscape-installs" class="py-2 text-white/70 flex items-center justify-between"><span>Landscape Installs</span><span class="text-brand">→</span></a>
+          <a href="/services/land-clearing" class="py-2 text-white/70 flex items-center justify-between"><span>Land Clearing</span><span class="text-brand">→</span></a>
+          <a href="/services/pressure-washing" class="py-2 text-white/70 flex items-center justify-between"><span>Pressure Washing</span><span class="text-brand">→</span></a>
+          <a href="/services/property-management" class="py-2 text-white/70 flex items-center justify-between"><span>Property Management</span><span class="text-brand">→</span></a>
         </div>
       </div>
       <div class="mobile-areas py-1">
@@ -344,36 +348,36 @@ tailwind.config = {
           <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg>
         </button>
         <div class="mobile-areas-list pb-3 pl-4 gap-1">
-          <a href="service-areas.html" class="py-2 text-white/80 flex items-center justify-between font-semibold"><span>All Service Areas</span><span class="text-brand">→</span></a>
-          <a href="service-areas.html#greenville" class="py-2 text-white/70 flex items-center justify-between"><span>Greenville</span><span class="text-brand">→</span></a>
-          <a href="service-areas.html#rocky-mount" class="py-2 text-white/70 flex items-center justify-between"><span>Rocky Mount</span><span class="text-brand">→</span></a>
-          <a href="service-areas.html#wilson" class="py-2 text-white/70 flex items-center justify-between"><span>Wilson</span><span class="text-brand">→</span></a>
-          <a href="service-areas.html#goldsboro" class="py-2 text-white/70 flex items-center justify-between"><span>Goldsboro</span><span class="text-brand">→</span></a>
-          <a href="service-areas.html#kinston" class="py-2 text-white/70 flex items-center justify-between"><span>Kinston</span><span class="text-brand">→</span></a>
-          <a href="service-areas.html#tarboro" class="py-2 text-white/70 flex items-center justify-between"><span>Tarboro</span><span class="text-brand">→</span></a>
-          <a href="service-areas.html#farmville" class="py-2 text-white/70 flex items-center justify-between"><span>Farmville</span><span class="text-brand">→</span></a>
-          <a href="service-areas.html#washington-nc" class="py-2 text-white/70 flex items-center justify-between"><span>Washington</span><span class="text-brand">→</span></a>
-          <a href="service-areas.html#new-bern" class="py-2 text-white/70 flex items-center justify-between"><span>New Bern</span><span class="text-brand">→</span></a>
-          <a href="service-areas.html#jacksonville-nc" class="py-2 text-white/70 flex items-center justify-between"><span>Jacksonville</span><span class="text-brand">→</span></a>
-          <a href="service-areas.html#havelock" class="py-2 text-white/70 flex items-center justify-between"><span>Havelock</span><span class="text-brand">→</span></a>
-          <a href="service-areas.html#winterville" class="py-2 text-white/70 flex items-center justify-between"><span>Winterville</span><span class="text-brand">→</span></a>
-          <a href="service-areas.html#ayden" class="py-2 text-white/70 flex items-center justify-between"><span>Ayden</span><span class="text-brand">→</span></a>
-          <a href="service-areas.html#bethel" class="py-2 text-white/70 flex items-center justify-between"><span>Bethel</span><span class="text-brand">→</span></a>
-          <a href="service-areas.html#grifton" class="py-2 text-white/70 flex items-center justify-between"><span>Grifton</span><span class="text-brand">→</span></a>
-          <a href="service-areas.html#snow-hill" class="py-2 text-white/70 flex items-center justify-between"><span>Snow Hill</span><span class="text-brand">→</span></a>
-          <a href="service-areas.html#williamston" class="py-2 text-white/70 flex items-center justify-between"><span>Williamston</span><span class="text-brand">→</span></a>
+          <a href="/service-areas" class="py-2 text-white/80 flex items-center justify-between font-semibold"><span>All Service Areas</span><span class="text-brand">→</span></a>
+          <a href="/service-areas/greenville" class="py-2 text-white/70 flex items-center justify-between"><span>Greenville</span><span class="text-brand">→</span></a>
+          <a href="/service-areas/rocky-mount" class="py-2 text-white/70 flex items-center justify-between"><span>Rocky Mount</span><span class="text-brand">→</span></a>
+          <a href="/service-areas/wilson" class="py-2 text-white/70 flex items-center justify-between"><span>Wilson</span><span class="text-brand">→</span></a>
+          <a href="/service-areas/goldsboro" class="py-2 text-white/70 flex items-center justify-between"><span>Goldsboro</span><span class="text-brand">→</span></a>
+          <a href="/service-areas/kinston" class="py-2 text-white/70 flex items-center justify-between"><span>Kinston</span><span class="text-brand">→</span></a>
+          <a href="/service-areas/tarboro" class="py-2 text-white/70 flex items-center justify-between"><span>Tarboro</span><span class="text-brand">→</span></a>
+          <a href="/service-areas/farmville" class="py-2 text-white/70 flex items-center justify-between"><span>Farmville</span><span class="text-brand">→</span></a>
+          <a href="/service-areas/washington-nc" class="py-2 text-white/70 flex items-center justify-between"><span>Washington</span><span class="text-brand">→</span></a>
+          <a href="/service-areas/new-bern" class="py-2 text-white/70 flex items-center justify-between"><span>New Bern</span><span class="text-brand">→</span></a>
+          <a href="/service-areas/jacksonville-nc" class="py-2 text-white/70 flex items-center justify-between"><span>Jacksonville</span><span class="text-brand">→</span></a>
+          <a href="/service-areas/havelock" class="py-2 text-white/70 flex items-center justify-between"><span>Havelock</span><span class="text-brand">→</span></a>
+          <a href="/service-areas/winterville" class="py-2 text-white/70 flex items-center justify-between"><span>Winterville</span><span class="text-brand">→</span></a>
+          <a href="/service-areas/ayden" class="py-2 text-white/70 flex items-center justify-between"><span>Ayden</span><span class="text-brand">→</span></a>
+          <a href="/service-areas/bethel" class="py-2 text-white/70 flex items-center justify-between"><span>Bethel</span><span class="text-brand">→</span></a>
+          <a href="/service-areas/grifton" class="py-2 text-white/70 flex items-center justify-between"><span>Grifton</span><span class="text-brand">→</span></a>
+          <a href="/service-areas/snow-hill" class="py-2 text-white/70 flex items-center justify-between"><span>Snow Hill</span><span class="text-brand">→</span></a>
+          <a href="/service-areas/williamston" class="py-2 text-white/70 flex items-center justify-between"><span>Williamston</span><span class="text-brand">→</span></a>
         </div>
       </div>
-      <a href="index.html#work" class="py-4 text-white/85 flex items-center justify-between"><span>Our Work</span><span class="text-brand">→</span></a>
-      <a href="index.html#about" class="py-4 text-white/85 flex items-center justify-between"><span>About</span><span class="text-brand">→</span></a>
-      <a href="contact.html" class="py-4 text-white/85 flex items-center justify-between"><span>Contact</span><span class="text-brand">→</span></a>
+      <a href="/#work" class="py-4 text-white/85 flex items-center justify-between"><span>Our Work</span><span class="text-brand">→</span></a>
+      <a href="/#about" class="py-4 text-white/85 flex items-center justify-between"><span>About</span><span class="text-brand">→</span></a>
+      <a href="/contact" class="py-4 text-white/85 flex items-center justify-between"><span>Contact</span><span class="text-brand">→</span></a>
     </nav>
-    <a href="contact.html" class="btn btn-primary w-full justify-center mt-4">Get Your Free Estimate</a>
+    <a href="/contact" class="btn btn-primary w-full justify-center mt-4">Get Your Free Estimate</a>
   </div>
 </header>
 <script>
   const b=document.getElementById("menu-btn"),m=document.getElementById("mobile-menu"),s=document.querySelector(".mobile-services"),t=document.querySelector(".mobile-services-toggle"),a=document.querySelector(".mobile-areas"),u=document.querySelector(".mobile-areas-toggle");
-  function setMenu(open){if(!b||!m)return;m.classList.toggle("open",open);b.classList.toggle("open",open);document.documentElement.classList.toggle("menu-open",open);b.setAttribute("aria-expanded",open?"true":"false")}
+  function setMenu(open){if(!b||!m)return;m.classList.toggle("open",open);b.classList.toggle("open",open);document.documentElement.classList.toggle("menu-open",open);b.setAttribute("aria-expanded",open?"true":"false");b.setAttribute("aria-label",open?"Close menu":"Open menu");if(!open){setServices(false);setAreas(false)}}
   function setServices(open){if(!s||!t)return;s.classList.toggle("open",open);t.setAttribute("aria-expanded",open?"true":"false")}
   function setAreas(open){if(!a||!u)return;a.classList.toggle("open",open);u.setAttribute("aria-expanded",open?"true":"false")}
   b&&m&&b.addEventListener("click",()=>setMenu(!m.classList.contains("open")));
@@ -520,7 +524,7 @@ tailwind.config = {
           </div>
           <h3 class="display text-3xl">Estimate request received.</h3>
           <p class="mt-3 text-white/60 max-w-[40ch]">Thanks — we'll get back to you within 24 hours. If you need us sooner, give us a call at 252.503.0984.</p>
-          <a href="index.html" class="btn btn-ghost mt-8">Back to Home</a>
+          <a href="/" class="btn btn-ghost mt-8">Back to Home</a>
         </div>
       </form>
     </div>
@@ -542,19 +546,19 @@ tailwind.config = {
     <div class="col-span-6 md:col-span-3">
       <div class="eyebrow mb-4">Services</div>
       <ul class="space-y-2 text-sm text-white/65">
-        <li><a href="services/lawn-care.html" class="hover:text-white">Lawn Care</a></li>
-        <li><a href="services/tree-stump-removal.html" class="hover:text-white">Tree &amp; Stump Removal</a></li>
-        <li><a href="services/landscape-installs.html" class="hover:text-white">Landscape Installs</a></li>
-        <li><a href="services/land-clearing.html" class="hover:text-white">Land Clearing</a></li>
-        <li><a href="services/pressure-washing.html" class="hover:text-white">Pressure Washing</a></li>
-        <li><a href="services/property-management.html" class="hover:text-white">Property Management</a></li>
+        <li><a href="/services/lawn-care" class="hover:text-white">Lawn Care</a></li>
+        <li><a href="/services/tree-stump-removal" class="hover:text-white">Tree &amp; Stump Removal</a></li>
+        <li><a href="/services/landscape-installs" class="hover:text-white">Landscape Installs</a></li>
+        <li><a href="/services/land-clearing" class="hover:text-white">Land Clearing</a></li>
+        <li><a href="/services/pressure-washing" class="hover:text-white">Pressure Washing</a></li>
+        <li><a href="/services/property-management" class="hover:text-white">Property Management</a></li>
       </ul>
     </div>
     <div class="col-span-6 md:col-span-4">
       <div class="eyebrow mb-4">Contact</div>
       <ul class="space-y-2 text-sm text-white/65">
         <li><a href="tel:2525030984" class="hover:text-white">252.503.0984</a></li>
-        <li><a href="contact.html" class="hover:text-white">Request a Free Estimate</a></li>
+        <li><a href="/contact" class="hover:text-white">Request a Free Estimate</a></li>
         <li>Eastern North Carolina</li>
         <li>Mon – Sat</li>
       </ul>

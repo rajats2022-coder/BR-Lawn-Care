@@ -140,11 +140,11 @@ Monday through Saturday, 7:00 AM – 7:00 PM local time. Closed Sundays.
 
 1. **Fully insured** — certificate available on request
 2. **Free estimates** — 24-hour reply, no pressure
-3. **Same-week scheduling** — most standard jobs start within the week
+3. **Scope-based scheduling** — timing is confirmed after BR reviews the property, route, and requested work
 4. **Honest pricing** — no hidden fees, no upsell pressure
 5. **One crew, one invoice** — residential, commercial, and recurring accounts all handled by the same team
 6. **Locally owned** — built and run in Eastern North Carolina
 
-## Service-area landing page hub
+## Service-area architecture
 
-BR Lawn Care has crawlable service-by-city pages at https://brlawncarenc.com/service-areas. The hub links every confirmed service to every listed Eastern NC city, including Greenville, Rocky Mount, Wilson, Goldsboro, Kinston, Tarboro, Farmville, Washington, New Bern, Jacksonville, Havelock, Winterville, Ayden, Bethel, Grifton, Snow Hill, Williamston.
+BR Lawn Care maintains one useful coverage hub for each listed city at https://brlawncarenc.com/service-areas. The city hubs link to complete pages for lawn care, tree and stump removal, landscape installs, land clearing, pressure washing, and exterior grounds management. The older repeated service-by-city URLs permanently redirect to the relevant city hub. Listed communities include Greenville, Rocky Mount, Wilson, Goldsboro, Kinston, Tarboro, Farmville, Washington, New Bern, Jacksonville, Havelock, Winterville, Ayden, Bethel, Grifton, Snow Hill, and Williamston.
