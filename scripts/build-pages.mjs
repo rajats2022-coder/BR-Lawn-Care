@@ -261,6 +261,7 @@ fs.writeFileSync(path.join(root, 'sitemap.xml'), sitemap)
 const vercel = {
   cleanUrls: true,
   trailingSlash: false,
+  outputDirectory: '.',
   redirects: [
     { source: '/service-areas/:city/:service', destination: '/service-areas/:city', permanent: true },
   ],

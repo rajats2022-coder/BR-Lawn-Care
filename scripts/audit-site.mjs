@@ -86,6 +86,7 @@ for (const required of ['logo.JPG', 'assets/service-pages.css', 'assets/chatbot.
 }
 
 const vercel = JSON.parse(read('vercel.json'))
+if (vercel.outputDirectory !== '.') findings.push('Vercel output directory must remain the generated site root')
 const legacyRedirect = vercel.redirects?.find((item) => item.source === '/service-areas/:city/:service')
 if (!legacyRedirect || legacyRedirect.destination !== '/service-areas/:city' || legacyRedirect.permanent !== true) {
   findings.push('missing permanent legacy service-by-city consolidation redirect')

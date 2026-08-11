@@ -34,7 +34,7 @@ Generated static HTML + Tailwind (CDN). Shared service and city data produces th
 3. Import this GitHub repo (`rajats2022-coder/BR-Lawn-Care`)
 4. Framework preset: **Other**
 5. Build command: `npm run build`
-6. Output directory: *(leave blank — root)*
+6. Output directory: `.` (the generated site root)
 7. Click **Deploy**
 
 Vercel will serve the site directly from the repo root.
