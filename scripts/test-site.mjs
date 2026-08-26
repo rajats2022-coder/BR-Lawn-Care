@@ -29,7 +29,7 @@ try {
     if (!markup.includes(`rel="canonical" href="${url.href}"`)) throw new Error(`${url.pathname} has the wrong canonical`)
     assertions += 3
   }
-  for (const asset of ['/assets/service-pages.css', '/assets/chatbot.js', '/assets/photos/IMG_0301.webp', '/logo.JPG', '/robots.txt', '/llms.txt']) {
+  for (const asset of ['/assets/service-pages.css', '/assets/chatbot.js', '/assets/site-analytics.js', '/assets/photos/IMG_0301.webp', '/logo.JPG', '/robots.txt', '/llms.txt']) {
     const response = await fetch(`${base}${asset}`)
     if (!response.ok) throw new Error(`${asset} returned ${response.status}`)
     assertions += 1
@@ -41,7 +41,7 @@ try {
   if (missing.status !== 404) throw new Error('missing route did not return 404')
   assertions += 1
   const contact = await (await fetch(`${base}/contact`)).text()
-  for (const contract of ['id="form-status"', 'role="alert"', 'id="form-privacy"', 'br_estimate_form_success', 'br_estimate_form_error']) {
+  for (const contract of ['id="form-status"', 'role="alert"', 'id="form-privacy"', 'br_estimate_form_success', 'br_estimate_form_error', 'generate_lead']) {
     if (!contact.includes(contract)) throw new Error(`contact conversion contract missing ${contract}`)
     assertions += 1
   }

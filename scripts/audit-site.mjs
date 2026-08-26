@@ -13,6 +13,7 @@ const urls = [...sitemap.matchAll(/<loc>([^<]+)<\/loc>/g)].map((match) => match[
 const expectedPaths = [
   '/',
   '/contact',
+  '/privacy',
   '/service-areas',
   ...services.map((service) => `/services/${service.slug}`),
   ...cities.map((city) => `/service-areas/${city.slug}`),
@@ -81,7 +82,7 @@ for (const url of urls) {
   }
 }
 
-for (const required of ['logo.JPG', 'assets/service-pages.css', 'assets/chatbot.js', 'robots.txt', 'llms.txt', 'llms-full.txt', 'vercel.json']) {
+for (const required of ['logo.JPG', 'assets/service-pages.css', 'assets/chatbot.js', 'assets/site-analytics.js', 'privacy.html', 'robots.txt', 'llms.txt', 'llms-full.txt', 'vercel.json']) {
   if (!exists(required)) findings.push(`missing required file ${required}`)
 }
 
@@ -114,6 +115,11 @@ if (!contact.includes('id="form-privacy"') || !contact.includes('transmitted thr
 }
 if (!contact.includes("recordConversionEvent('br_estimate_form_success'") || !contact.includes("recordConversionEvent('br_estimate_form_error'")) {
   findings.push('contact form is missing measurement-ready success and error events')
+}
+if (!contact.includes("recordConversionEvent('generate_lead'")) findings.push('contact form is missing its consent-gated generate_lead event')
+const analytics = read('assets/site-analytics.js')
+if (!analytics.includes("analytics_storage: 'denied'") || !analytics.includes("ad_storage: 'denied'") || !analytics.includes('GTM-TPXPZN28')) {
+  findings.push('analytics bootstrap is missing the approved consent-denied defaults or BR container')
 }
 if (/catch\s*\([^)]*\)\s*\{\s*\/\*\s*silent\s*\*\//i.test(contact)) findings.push('contact form still suppresses submission failures')
 

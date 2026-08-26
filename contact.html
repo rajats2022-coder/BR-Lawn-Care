@@ -234,6 +234,7 @@ tailwind.config = {
   }
   @supports not (overflow:clip){main,section,header,footer{overflow-x:hidden}}
 </style>
+<script src="/assets/site-analytics.js" defer></script>
 </head>
 <body class="bg-ink text-white">
 
@@ -459,7 +460,7 @@ tailwind.config = {
         </div>
 
         <div id="form-privacy" class="privacy-note mt-8">
-          <strong class="text-white/70">Privacy note:</strong> BR Lawn Care asks for the information in this form to review and respond to your estimate request. The submission is transmitted through Formspree. Do not include payment information, account credentials, medical information, or other sensitive records.
+          <strong class="text-white/70">Privacy note:</strong> BR Lawn Care asks for the information in this form to review and respond to your estimate request. The submission is transmitted through Formspree. Do not include payment information, account credentials, medical information, or other sensitive records. Read the <a href="/privacy">privacy notice</a>.
         </div>
 
         <div id="form-status" class="form-status hidden mt-5" role="alert" aria-live="assertive" tabindex="-1"></div>
@@ -514,6 +515,7 @@ tailwind.config = {
       <ul class="space-y-2 text-sm text-white/65">
         <li><a href="tel:2525030984" class="hover:text-white">252.503.0984</a></li>
         <li><a href="/contact" class="hover:text-white">Request an Estimate</a></li>
+        <li><a href="/privacy" class="hover:text-white">Privacy</a></li>
         <li>Eastern North Carolina</li>
         <li>Mon – Sat</li>
       </ul>
@@ -534,7 +536,7 @@ tailwind.config = {
 
   const recordConversionEvent = (event, detail = {}) => {
     document.dispatchEvent(new CustomEvent('br:conversion', { detail: { event, ...detail } }));
-    if (Array.isArray(window.dataLayer)) window.dataLayer.push({ event, ...detail });
+    window.brAnalyticsConsent?.track(event, detail);
   };
 
   const showFormError = (message) => {
@@ -569,6 +571,7 @@ tailwind.config = {
         document.getElementById('success').classList.remove('hidden');
         form.reset();
         recordConversionEvent('br_estimate_form_success', { form_id: 'estimate-form' });
+        recordConversionEvent('generate_lead', { lead_type: 'estimate_request' });
         return;
       }
 

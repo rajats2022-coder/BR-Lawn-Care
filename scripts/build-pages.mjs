@@ -65,7 +65,7 @@ const footer = () => `
 <footer class="border-t border-white/8 py-12 bg-[#080B10]">
   <div class="max-w-[1400px] mx-auto px-6 md:px-10 grid gap-8 md:grid-cols-[1.3fr_1fr_1fr] text-sm text-white/55">
     <div><div class="display text-xl text-white">BR Lawn Care</div><p class="mt-3 max-w-[38ch] leading-relaxed">Jacksonville-based lawn, landscape, clearing, tree, exterior-cleaning, and grounds services across 19 verified Eastern North Carolina cities.</p></div>
-    <div><div class="font-bold text-white mb-3">Explore</div><div class="grid gap-2"><a href="/" class="hover:text-white">Home</a><a href="/#services" class="hover:text-white">Services</a><a href="/service-areas" class="hover:text-white">Service Areas</a><a href="/contact" class="hover:text-white">Free Estimate</a></div></div>
+    <div><div class="font-bold text-white mb-3">Explore</div><div class="grid gap-2"><a href="/" class="hover:text-white">Home</a><a href="/#services" class="hover:text-white">Services</a><a href="/service-areas" class="hover:text-white">Service Areas</a><a href="/contact" class="hover:text-white">Free Estimate</a><a href="/privacy" class="hover:text-white">Privacy</a></div></div>
     <div><div class="font-bold text-white mb-3">Contact</div><div class="grid gap-2"><a href="tel:${site.phoneHref}" class="hover:text-white">${site.phoneDisplay}</a><span>Monday–Saturday, 7 AM–7 PM</span><a href="/service-areas" class="hover:text-white">19 verified service areas</a></div></div>
   </div>
 </footer>`
@@ -113,6 +113,7 @@ const pageShell = ({ title, description, canonicalPath, image = '/assets/photos/
 <meta name="twitter:description" content="${html(description)}" />
 <meta name="twitter:image" content="${absolute(image)}" />
 <script type="application/ld+json">${json(schema)}</script>
+<script src="/assets/site-analytics.js" defer></script>
 </head>
 <body>
 ${header()}
@@ -250,6 +251,7 @@ fs.writeFileSync(path.join(root, 'service-areas.html'), serviceAreasPage())
 const urls = [
   '/',
   '/contact',
+  '/privacy',
   '/service-areas',
   ...services.map((service) => `/services/${service.slug}`),
   ...cities.map((city) => `/service-areas/${city.slug}`),
