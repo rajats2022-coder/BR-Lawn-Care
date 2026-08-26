@@ -194,7 +194,7 @@ const citySchema = (city) => ({
   ],
 })
 
-const cityDescription = (city) => `Request lawn, landscape, tree, clearing, pressure-washing, and grounds estimates in ${city.name}, NC from BR Lawn Care. Call ${site.phoneDisplay}.`
+const cityDescription = (city) => `Request lawn, landscape, tree, clearing, and grounds estimates in ${city.name}, NC from BR Lawn Care. Call ${site.phoneDisplay}.`
 
 const focusAreasSection = (city) => city.focusAreas.length ? `
   <section class="max-w-[1100px] mx-auto px-6 md:px-10 pb-20"><div class="service-card p-8 md:p-12"><div class="eyebrow mb-4">Jacksonville area context</div><h2 class="display text-4xl md:text-5xl">Neighborhood names help describe the property—not create separate doorway pages.</h2><p class="mt-5 text-white/60 max-w-[72ch] leading-relaxed">BR can use the Jacksonville place names below to understand the request and nearby route context. Final availability is confirmed from the property address.</p><div class="mt-7 flex flex-wrap gap-3">${city.focusAreas.map((area) => `<span class="rounded-full border border-white/12 px-4 py-2 text-sm text-white/70">${html(area)}</span>`).join('')}</div></div></section>` : ''
@@ -230,11 +230,14 @@ const serviceAreasPage = () => {
   const body = `<main class="pt-28 md:pt-36">
   <section class="max-w-[1200px] mx-auto px-6 md:px-10 pb-14"><div class="eyebrow mb-5">Verified Service Areas</div><h1 class="display text-5xl md:text-7xl lg:text-[84px]">19 Eastern North Carolina cities.</h1><p class="mt-7 text-white/65 text-lg leading-relaxed max-w-[68ch]">BR Lawn Care serves the 19 cities listed below. Each city page explains the available service categories and the property details that help the team prepare a useful response. Final route availability is confirmed from the property address before scheduling.</p><div class="mt-8 flex flex-wrap gap-4"><a href="/contact" class="btn btn-primary">Request a Free Estimate</a><a href="tel:${site.phoneHref}" class="btn btn-ghost">Call ${site.phoneDisplay}</a></div></section>
   <section class="max-w-[1200px] mx-auto px-6 md:px-10 pb-20"><div class="area-link-grid">${cities.map((city) => `<a id="${city.slug}" class="area-link-card" href="/service-areas/${city.slug}"><span>${html(city.name)}, NC</span><small>${html(city.county)} · View coverage and estimate guidance</small></a>`).join('')}</div></section>
-  <section class="max-w-[1200px] mx-auto px-6 md:px-10 pb-20"><div class="service-card p-8 md:p-12"><div class="eyebrow mb-4">Six service categories</div><h2 class="display text-4xl md:text-5xl">Start with the work the property needs.</h2><p class="mt-5 text-white/60 max-w-[68ch] leading-relaxed">The main service pages explain scope, preparation, and estimate expectations. City pages stay focused on service coverage instead of repeating six nearly identical landing pages for every location.</p><div class="area-link-grid mt-8">${services.map((service) => `<a class="area-link-card" href="/services/${service.slug}"><span>${html(service.name)}</span><small>${html(service.navSummary)}</small></a>`).join('')}</div></div></section>
+  <section class="max-w-[1200px] mx-auto px-6 md:px-10 pb-20"><div class="service-card p-8 md:p-12"><div class="eyebrow mb-4">${services.length} service categories</div><h2 class="display text-4xl md:text-5xl">Start with the work the property needs.</h2><p class="mt-5 text-white/60 max-w-[68ch] leading-relaxed">The main service pages explain scope, preparation, and estimate expectations. City pages stay focused on service coverage instead of repeating nearly identical landing pages for every location.</p><div class="area-link-grid mt-8">${services.map((service) => `<a class="area-link-card" href="/services/${service.slug}"><span>${html(service.name)}</span><small>${html(service.navSummary)}</small></a>`).join('')}</div></div></section>
   <section class="max-w-[1100px] mx-auto px-6 md:px-10 pb-24 copy"><div class="grid md:grid-cols-2 gap-6"><div class="service-card p-8"><div class="eyebrow mb-3">Outside the list?</div><h2 class="display text-3xl">Ask before assuming.</h2><p class="mt-5">Routes and availability can change. Call or submit the property address so BR Lawn Care can confirm whether the requested work fits the current service route.</p></div><div class="service-card p-8"><div class="eyebrow mb-3">Multiple services?</div><h2 class="display text-3xl">Use one estimate request.</h2><p class="mt-5">List every requested service, include photos, and describe the desired result. BR can determine whether the work belongs in one scope or separate estimates.</p></div></div></section>
 </main>`
   return pageShell({ title, description, canonicalPath: '/service-areas', schema, body })
 }
+
+const retiredPressurePage = path.join(root, 'services', 'pressure-washing.html')
+if (fs.existsSync(retiredPressurePage)) fs.unlinkSync(retiredPressurePage)
 
 for (const service of services) {
   fs.writeFileSync(path.join(root, 'services', `${service.slug}.html`), servicePage(service))
@@ -243,6 +246,9 @@ for (const service of services) {
 for (const [index, city] of cities.entries()) {
   const directory = path.join(root, 'service-areas', city.slug)
   fs.mkdirSync(directory, { recursive: true })
+  for (const file of fs.readdirSync(directory)) {
+    if (file.endsWith('.html') && file !== 'index.html') fs.unlinkSync(path.join(directory, file))
+  }
   fs.writeFileSync(path.join(directory, 'index.html'), cityPage(city, index))
 }
 
@@ -269,6 +275,7 @@ const vercel = {
   trailingSlash: false,
   outputDirectory: '.',
   redirects: [
+    { source: '/services/pressure-washing', destination: '/#services', permanent: true },
     { source: '/service-areas/:city/:service', destination: '/service-areas/:city', permanent: true },
   ],
   headers: [

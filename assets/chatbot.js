@@ -24,7 +24,7 @@
     {
       id: 'services',
       kws: ['service','services','what do you do','offer','offerings','do you do','do you offer','provide'],
-      a: "Six core services: mowing, tree & stump removal, land clearing, landscape installs, pressure washing, and ongoing property management.",
+      a: "Five core services: mowing, tree & stump removal, land clearing, landscape installs, and ongoing property grounds management.",
       cta: 'estimate'
     },
     {
@@ -49,12 +49,6 @@
       id: 'landscape',
       kws: ['landscape','landscaping','install','installs','installation','sod','mulch','rock','stone','plant','plants','planting','bed','beds','design','makeover','curb appeal'],
       a: "Sod, mulch, rock, plantings, and full yard makeovers built to last. Share photos + a rough idea and we'll come back with a plan.",
-      cta: 'estimate'
-    },
-    {
-      id: 'pressure',
-      kws: ['pressure','power wash','wash','washing','driveway','siding','deck','patio','walkway','concrete','stain'],
-      a: "Driveways, siding, decks, patios, and walkways — soft-washed or pressure-washed based on the surface.",
       cta: 'estimate'
     },
     {
@@ -144,7 +138,7 @@
     {
       id: 'gutter',
       kws: ['gutter','gutters','downspout'],
-      a: "Gutter cleaning rolls into most pressure washing or seasonal cleanup visits — just add it to the estimate form.",
+      a: "Gutter cleaning is not listed as a core BR Lawn Care service. Use the estimate form to describe the property need so Brian can confirm whether it fits the current scope.",
       cta: 'estimate'
     },
     {

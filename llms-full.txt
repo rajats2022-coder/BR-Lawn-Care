@@ -62,15 +62,6 @@ For overgrown lots, vacant land, and neglected properties:
 - Site prep for builds, fences, and new installs
 - Residential and commercial parcels
 
-### Pressure Washing
-
-Exterior surfaces restored and refreshed:
-- Driveways and concrete aprons
-- House siding (vinyl, fiber cement, brick)
-- Decks and patios
-- Walkways and stairs
-- Fences
-
 ### Property Management
 
 Ongoing maintenance for property owners, rental portfolios, HOAs, and commercial lots:
@@ -149,4 +140,4 @@ Monday through Saturday, 7:00 AM – 7:00 PM local time. Closed Sundays.
 
 ## Service-area architecture
 
-BR Lawn Care maintains one useful coverage hub for each listed city at https://brlawncarenc.com/service-areas. The city hubs link to complete pages for lawn care, tree and stump removal, landscape installs, land clearing, pressure washing, and exterior grounds management. The older repeated service-by-city URLs permanently redirect to the relevant city hub. Listed communities include Greenville, Rocky Mount, Wilson, Goldsboro, Kinston, Tarboro, Farmville, Washington, New Bern, Jacksonville, Swansboro, Wilmington, Havelock, Winterville, Ayden, Bethel, Grifton, Snow Hill, and Williamston.
+BR Lawn Care maintains one useful coverage hub for each listed city at https://brlawncarenc.com/service-areas. The city hubs link to complete pages for lawn care, tree and stump removal, landscape installs, land clearing, and exterior grounds management. The older repeated service-by-city URLs permanently redirect to the relevant city hub. Listed communities include Greenville, Rocky Mount, Wilson, Goldsboro, Kinston, Tarboro, Farmville, Washington, New Bern, Jacksonville, Swansboro, Wilmington, Havelock, Winterville, Ayden, Bethel, Grifton, Snow Hill, and Williamston.

@@ -4,6 +4,11 @@
   "outputDirectory": ".",
   "redirects": [
     {
+      "source": "/services/pressure-washing",
+      "destination": "/#services",
+      "permanent": true
+    },
+    {
       "source": "/service-areas/:city/:service",
       "destination": "/service-areas/:city",
       "permanent": true
