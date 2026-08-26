@@ -3,7 +3,7 @@ export const site = {
   name: 'BR Lawn Care',
   phoneDisplay: '252.503.0984',
   phoneHref: '+12525030984',
-  lastmod: '2026-08-11',
+  lastmod: '2026-08-26',
 }
 
 export const services = [
@@ -160,24 +160,26 @@ export const services = [
 ]
 
 export const cities = [
-  ['greenville', 'Greenville', 'Pitt County', 'BR Lawn Care lists Greenville as a core service area for residential, rental, and commercial exterior work.', 'Include the property type, address, access notes, and the service you need so the estimate can be routed and scoped correctly.'],
-  ['rocky-mount', 'Rocky Mount', 'Nash and Edgecombe counties', 'Rocky Mount customers can request a combined estimate when a property needs lawn, cleanup, landscape, tree, or exterior-surface work.', 'For larger or multi-part properties, identify the work boundary and every surface or outdoor area that should be included.'],
+  ['greenville', 'Greenville', 'Pitt County', 'BR Lawn Care lists Greenville as a service area for residential, rental, and commercial exterior work.', 'Include the property type, address, access notes, and the service you need so the estimate can be routed and scoped correctly.'],
+  ['rocky-mount', 'Rocky Mount', 'Nash and Edgecombe counties', 'Rocky Mount customers can request an estimate when a property needs lawn, cleanup, landscape, tree, or exterior-surface work.', 'For larger or multi-part properties, identify the work boundary and every surface or outdoor area that should be included.'],
   ['wilson', 'Wilson', 'Wilson County', 'BR Lawn Care accepts Wilson requests for routine grounds upkeep and defined one-time outdoor projects.', 'Share whether the request is recurring or one-time and note gates, pets, tenants, or commercial access requirements.'],
-  ['goldsboro', 'Goldsboro', 'Wayne County', 'Goldsboro is included in BR Lawn Care’s Eastern North Carolina coverage for homes, rentals, and commercial properties.', 'Photos and a short description help separate immediate work from optional landscape or cleanup items.'],
-  ['kinston', 'Kinston', 'Lenoir County', 'Kinston property owners can request estimates across BR Lawn Care’s six outdoor-service categories.', 'Describe the desired finish—not only the current problem—so preparation, installation, cleanup, and haul-off can be scoped.'],
+  ['goldsboro', 'Goldsboro', 'Wayne County', 'Goldsboro is included in BR Lawn Care’s Eastern North Carolina service area for homes, rentals, and commercial properties.', 'Photos and a short description help separate immediate work from optional landscape or cleanup items.'],
+  ['kinston', 'Kinston', 'Lenoir County', 'Kinston property owners can request estimates across BR Lawn Care’s outdoor-service categories.', 'Describe the desired finish—not only the current problem—so preparation, installation, cleanup, and haul-off can be scoped.'],
   ['tarboro', 'Tarboro', 'Edgecombe County', 'BR Lawn Care serves Tarboro with quoted lawn, landscape, clearing, tree, washing, and grounds-maintenance work.', 'Provide the address and timeline, then identify any property lines, utilities, structures, or access limitations relevant to the work.'],
   ['farmville', 'Farmville', 'Pitt County', 'Farmville customers can contact BR Lawn Care for recurring lawn requests and individually scoped outdoor projects.', 'For repeat service, include the preferred frequency; for project work, include photos and the areas that should remain untouched.'],
-  ['washington-nc', 'Washington', 'Beaufort County', 'Washington is one of the Eastern North Carolina communities listed in BR Lawn Care’s service coverage.', 'List each requested surface or outdoor area and note water access, gates, parking, tenants, or other scheduling constraints.'],
+  ['washington-nc', 'Washington', 'Beaufort County', 'Washington is one of the Eastern North Carolina communities in BR Lawn Care’s verified service area.', 'List each requested surface or outdoor area and note water access, gates, parking, tenants, or other scheduling constraints.'],
   ['new-bern', 'New Bern', 'Craven County', 'New Bern customers can request lawn, landscape, clearing, tree, pressure-washing, and exterior grounds estimates from BR Lawn Care.', 'A complete request should identify the property, work area, access, desired result, and whether debris removal is needed.'],
-  ['jacksonville-nc', 'Jacksonville', 'Onslow County', 'BR Lawn Care includes Jacksonville in its service-area list for residential and commercial outdoor work.', 'If the property is rented or managed, include the on-site contact and approval process along with the requested exterior scope.'],
-  ['havelock', 'Havelock', 'Craven County', 'Havelock property owners can contact BR Lawn Care for the same quoted exterior services available across its Eastern North Carolina route.', 'Send photos from more than one angle when access, trees, overgrowth, or multiple exterior surfaces affect the estimate.'],
-  ['winterville', 'Winterville', 'Pitt County', 'Winterville is included in BR Lawn Care’s core service-area coverage for routine and project-based outdoor work.', 'Tell BR whether the priority is immediate cleanup, recurring upkeep, or a finished landscape change so the estimate stays focused.'],
+  ['jacksonville-nc', 'Jacksonville', 'Onslow County', 'BR Lawn Care is based in Jacksonville and accepts residential and commercial outdoor-service requests across the city.', 'If the property is rented or managed, include the on-site contact and approval process along with the requested exterior scope.', ['Jacksonville Commons', 'College Park', 'Brynn Marr', 'Northwoods', 'Downtown Jacksonville', 'Georgetown', 'New River and Bell Fork', 'Carolina Forest']],
+  ['swansboro', 'Swansboro', 'Onslow County', 'BR Lawn Care accepts service requests in Swansboro for lawn, landscape, clearing, tree, pressure-washing, and exterior grounds work.', 'Share the property address, requested result, access notes, and photos so BR can confirm route availability and the estimate scope.'],
+  ['wilmington', 'Wilmington', 'New Hanover County', 'BR Lawn Care lists Wilmington as a service area for quoted residential and commercial outdoor work.', 'Because Wilmington is a longer route from Jacksonville, include the complete property scope and timing so BR can confirm availability before scheduling.'],
+  ['havelock', 'Havelock', 'Craven County', 'Havelock property owners can contact BR Lawn Care for quoted exterior services across its Eastern North Carolina route.', 'Send photos from more than one angle when access, trees, overgrowth, or multiple exterior surfaces affect the estimate.'],
+  ['winterville', 'Winterville', 'Pitt County', 'Winterville is included in BR Lawn Care’s verified service area for routine and project-based outdoor work.', 'Tell BR whether the priority is immediate cleanup, recurring upkeep, or a finished landscape change so the estimate stays focused.'],
   ['ayden', 'Ayden', 'Pitt County', 'Ayden customers can request estimates for lawn care, tree and stump work, landscape installs, clearing, washing, and grounds upkeep.', 'Identify the primary service first, then add related work so the crew can decide whether one or separate scopes are needed.'],
   ['bethel', 'Bethel', 'Pitt County', 'BR Lawn Care accepts Bethel service requests for homes, rentals, lots, and commercial exterior areas.', 'Include property access, approximate size, photos, and any cleanup or haul-off expectations in the first request.'],
-  ['grifton', 'Grifton', 'Pitt and Lenoir counties', 'Grifton is part of BR Lawn Care’s listed Eastern North Carolina coverage for quoted outdoor services.', 'Because access and work boundaries affect project scope, mark or describe the exact area before the on-site estimate.'],
+  ['grifton', 'Grifton', 'Pitt and Lenoir counties', 'Grifton is part of BR Lawn Care’s verified Eastern North Carolina service area for quoted outdoor services.', 'Because access and work boundaries affect project scope, mark or describe the exact area before the on-site estimate.'],
   ['snow-hill', 'Snow Hill', 'Greene County', 'Snow Hill customers can contact BR Lawn Care for recurring lawn needs and clearly defined outdoor projects.', 'Share the requested timeline and whether the property is occupied, vacant, commercial, or managed by another contact.'],
-  ['williamston', 'Williamston', 'Martin County', 'Williamston is included in BR Lawn Care’s Eastern North Carolina service-area list.', 'For the fastest useful estimate, send the address, photos, requested service, desired result, access details, and contact preference.'],
-].map(([slug, name, county, intro, planning]) => ({ slug, name, county, intro, planning }))
+  ['williamston', 'Williamston', 'Martin County', 'Williamston is included in BR Lawn Care’s verified Eastern North Carolina service area.', 'For the fastest useful estimate, send the address, photos, requested service, desired result, access details, and contact preference.'],
+].map(([slug, name, county, intro, planning, focusAreas = []]) => ({ slug, name, county, intro, planning, focusAreas }))
 
 const cityRequestGuides = {
   greenville: {
@@ -268,6 +270,24 @@ const cityRequestGuides = {
       ['Tenant-occupied property', 'Name the owner or manager approving the estimate, the tenant access contact, acceptable work windows, and notification requirements.'],
       ['Exterior property reset', 'Prioritize mowing, trimming, debris, beds, or washing and state the condition needed for showing, occupancy, or regular upkeep.'],
       ['Recurring business grounds', 'Identify public-facing areas, service frequency, parking or delivery conflicts, and the person responsible for scope changes.'],
+    ],
+  },
+  swansboro: {
+    title: 'Describe the property and access clearly.',
+    intro: 'Swansboro requests are easier to evaluate when the address, work area, access, and desired result arrive together.',
+    items: [
+      ['Routine lawn request', 'Include the preferred visit frequency, fenced areas, pets, edging expectations, and hard surfaces that need cleanup.'],
+      ['Outdoor project', 'Send wide and close photos, explain the desired finish, and identify material that should stay or be removed.'],
+      ['Access and timing', 'Note gates, tenants, occupied areas, parking, or scheduling limits that affect the estimate or work window.'],
+    ],
+  },
+  wilmington: {
+    title: 'Send a complete scope before route confirmation.',
+    intro: 'Wilmington requests should identify the entire project so BR can assess route fit, equipment, timing, and whether an on-site estimate is practical.',
+    items: [
+      ['Property and work area', 'Provide the full address, property type, approximate size, and clear boundaries for every requested service.'],
+      ['Photos and desired finish', 'Show the current condition from several angles and describe the result expected after cleanup, installation, or maintenance.'],
+      ['Route and schedule', 'Include the preferred timing and access contact; BR confirms Wilmington availability before any work is scheduled.'],
     ],
   },
   havelock: {

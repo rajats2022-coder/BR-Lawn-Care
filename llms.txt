@@ -25,7 +25,7 @@ BR Lawn Care is a small, locally owned crew based in Eastern North Carolina. We 
 
 ## Service Area
 
-BR Lawn Care serves residential and commercial clients throughout Eastern North Carolina and surrounding counties — including Greenville NC, Rocky Mount, Wilson, Goldsboro, Kinston, Tarboro, Farmville, Washington NC, New Bern, Jacksonville NC, Havelock, Winterville, Ayden, Bethel, Grifton, Snow Hill, and Williamston. Final scheduling depends on the property, requested scope, route, and current availability.
+BR Lawn Care serves residential and commercial clients throughout 19 verified Eastern North Carolina service areas: Greenville, Rocky Mount, Wilson, Goldsboro, Kinston, Tarboro, Farmville, Washington, New Bern, Jacksonville, Swansboro, Wilmington, Havelock, Winterville, Ayden, Bethel, Grifton, Snow Hill, and Williamston. Final scheduling depends on the property, requested scope, route, and current availability.
 
 ## Key Pages
 
@@ -35,7 +35,7 @@ BR Lawn Care serves residential and commercial clients throughout Eastern North 
 ## Frequently Asked Questions
 
 **What areas does BR Lawn Care serve?**
-Residential and commercial properties across Eastern North Carolina and surrounding counties — including Greenville, Rocky Mount, Wilson, Goldsboro, Kinston, Tarboro, Washington NC, New Bern, Jacksonville, and nearby areas.
+Residential and commercial properties across BR Lawn Care’s 19 verified Eastern North Carolina service areas.
 
 **How much does lawn care cost?**
 Lawn care starts at $55. Pricing is determined per property with a free estimate, with no hidden fees.
@@ -64,4 +64,4 @@ Call or text 252.503.0984 for fastest response, or fill out the free estimate fo
 
 ## Service-area architecture
 
-BR Lawn Care maintains one useful coverage hub for each listed city at https://brlawncarenc.com/service-areas. The city hubs link to complete pages for lawn care, tree and stump removal, landscape installs, land clearing, pressure washing, and exterior grounds management. Listed communities include Greenville, Rocky Mount, Wilson, Goldsboro, Kinston, Tarboro, Farmville, Washington, New Bern, Jacksonville, Havelock, Winterville, Ayden, Bethel, Grifton, Snow Hill, and Williamston.
+BR Lawn Care maintains one useful coverage hub for each listed city at https://brlawncarenc.com/service-areas. The city hubs link to complete pages for lawn care, tree and stump removal, landscape installs, land clearing, pressure washing, and exterior grounds management. Listed communities include Greenville, Rocky Mount, Wilson, Goldsboro, Kinston, Tarboro, Farmville, Washington, New Bern, Jacksonville, Swansboro, Wilmington, Havelock, Winterville, Ayden, Bethel, Grifton, Snow Hill, and Williamston.

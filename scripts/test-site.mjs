@@ -40,6 +40,11 @@ try {
   const missing = await fetch(`${base}/missing-page-for-test`)
   if (missing.status !== 404) throw new Error('missing route did not return 404')
   assertions += 1
+  const contact = await (await fetch(`${base}/contact`)).text()
+  for (const contract of ['id="form-status"', 'role="alert"', 'id="form-privacy"', 'br_estimate_form_success', 'br_estimate_form_error']) {
+    if (!contact.includes(contract)) throw new Error(`contact conversion contract missing ${contract}`)
+    assertions += 1
+  }
   console.log(`HTTP smoke tests passed: ${urls.length} pages and ${assertions} assertions.`)
 } finally {
   server.kill('SIGTERM')

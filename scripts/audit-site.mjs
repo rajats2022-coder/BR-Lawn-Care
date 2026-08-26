@@ -106,6 +106,16 @@ if (!contact.includes('action="https://formspree.io/f/mzdybokj"')) findings.push
 for (const field of ['name', 'phone', 'email', 'address', 'message']) {
   if (!new RegExp(`name="${field}"`).test(contact)) findings.push(`contact form missing ${field}`)
 }
+if (!contact.includes('id="form-status"') || !contact.includes('role="alert"') || !contact.includes('aria-live="assertive"')) {
+  findings.push('contact form is missing an accessible failure status')
+}
+if (!contact.includes('id="form-privacy"') || !contact.includes('transmitted through Formspree')) {
+  findings.push('contact form is missing its privacy and processor disclosure')
+}
+if (!contact.includes("recordConversionEvent('br_estimate_form_success'") || !contact.includes("recordConversionEvent('br_estimate_form_error'")) {
+  findings.push('contact form is missing measurement-ready success and error events')
+}
+if (/catch\s*\([^)]*\)\s*\{\s*\/\*\s*silent\s*\*\//i.test(contact)) findings.push('contact form still suppresses submission failures')
 
 if (/service-area keyword pages/i.test(read('llms.txt')) || /service-area keyword pages/i.test(read('llms-full.txt'))) {
   findings.push('LLM discovery files use keyword-page language')

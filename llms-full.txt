@@ -95,6 +95,8 @@ BR Lawn Care operates across Eastern North Carolina and surrounding counties.
 - Washington, NC
 - New Bern, NC
 - Jacksonville, NC
+- Swansboro, NC
+- Wilmington, NC
 - Havelock, NC
 - Winterville, NC
 - Ayden, NC
@@ -147,4 +149,4 @@ Monday through Saturday, 7:00 AM – 7:00 PM local time. Closed Sundays.
 
 ## Service-area architecture
 
-BR Lawn Care maintains one useful coverage hub for each listed city at https://brlawncarenc.com/service-areas. The city hubs link to complete pages for lawn care, tree and stump removal, landscape installs, land clearing, pressure washing, and exterior grounds management. The older repeated service-by-city URLs permanently redirect to the relevant city hub. Listed communities include Greenville, Rocky Mount, Wilson, Goldsboro, Kinston, Tarboro, Farmville, Washington, New Bern, Jacksonville, Havelock, Winterville, Ayden, Bethel, Grifton, Snow Hill, and Williamston.
+BR Lawn Care maintains one useful coverage hub for each listed city at https://brlawncarenc.com/service-areas. The city hubs link to complete pages for lawn care, tree and stump removal, landscape installs, land clearing, pressure washing, and exterior grounds management. The older repeated service-by-city URLs permanently redirect to the relevant city hub. Listed communities include Greenville, Rocky Mount, Wilson, Goldsboro, Kinston, Tarboro, Farmville, Washington, New Bern, Jacksonville, Swansboro, Wilmington, Havelock, Winterville, Ayden, Bethel, Grifton, Snow Hill, and Williamston.
